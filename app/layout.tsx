@@ -33,8 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body className={noto_sans.variable + " " + noto_serif.variable}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="light"
             disableTransitionOnChange
           >
             {children}
