@@ -1,7 +1,12 @@
 import "@/styles/globals.css"
 import "@/styles/styles.css"
 import type { Viewport } from "next"
-import { Noto_Sans, Noto_Serif } from "next/font/google"
+import {
+  Merriweather,
+  Montserrat,
+  Noto_Sans,
+  Noto_Serif,
+} from "next/font/google"
 
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -9,15 +14,16 @@ export const viewport: Viewport = {
   width: "device-width",
 }
 
-const noto_sans = Noto_Sans({
+const noto_sans = Montserrat({
   subsets: ["latin"],
   variable: "--font-noto-sans",
   display: "swap",
 })
 
-const noto_serif = Noto_Serif({
+const noto_serif = Merriweather({
   subsets: ["latin"],
   display: "swap",
+  weight: ["300", "400", "700"],
   variable: "--font-noto-serif",
 })
 

@@ -10,7 +10,7 @@ export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden mt-4">
       <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
         <Menu className="h-6 w-6" />
       </Button>

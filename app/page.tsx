@@ -5,9 +5,13 @@ import {
   Building2,
   Car,
   Coins,
+  Facebook,
   Heart,
+  Instagram,
   ShieldCheck,
+  Twitter,
   Users,
+  X,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -17,20 +21,30 @@ import { MobileMenu } from "@/components/mobile-menu"
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-[#4B0082]/10 to-[#00A86B]/10 bg-white">
+      <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-[#2ECC71]/20 to-[#2ECC71]/5 bg-white">
         <div className="container flex flex-col px-4">
-          <div className="flex justify-between h-24">
-            <Link href="/" className="flex items-center space-x-2">
+          <div className="flex justify-between">
+            <Link href="/" className="hidden md:flex items-center py-2">
               <div className="flex flex-col justify-center">
-                <span className="text-3xl md:text-4xl font-bold leading-none">
-                  Omar
-                </span>
-                <span className="text-3xl md:text-4xl font-bold leading-none text-[#4B0082]">
-                  Mohammad
-                </span>
+                <Image
+                  src={"/images/logo-om.png"}
+                  width={180}
+                  height={180}
+                  alt="Omar Muhammad"
+                />
               </div>
             </Link>
-            <div className="hidden md:block items-center space-x-4">
+            <Link href="/" className="flex md:hidden items-center py-2">
+              <div className="flex flex-col justify-center">
+                <Image
+                  src={"/images/logo-om.png"}
+                  width={100}
+                  height={100}
+                  alt="Omar Muhammad"
+                />
+              </div>
+            </Link>
+            <div className="hidden md:flex flex-col items-end space-x-4">
               <div>
                 <Button className="rounded-t-none round-b-lg bg-[#00A86B] hover:bg-[#00A86B]/90 text-white font-bold">
                   BECOME A SUPPORTER
@@ -42,7 +56,7 @@ export default function Page() {
                   DONATE
                 </Button>
               </div>
-              <nav className="flex justify-end py-2">
+              <nav className="flex justify-end items-center py-2 grow">
                 <div className="space-x-6 text-lg font-bold">
                   <Link
                     href="#about"
@@ -51,10 +65,10 @@ export default function Page() {
                     About Omar
                   </Link>
                   <Link
-                    href="#contact"
+                    href="#about"
                     className="transition-colors hover:text-foreground/80"
                   >
-                    Contact
+                    My Vision
                   </Link>
                 </div>
               </nav>
@@ -65,9 +79,9 @@ export default function Page() {
       </header>
 
       <main className="flex-1">
-        <section className="w-full bg-gradient-to-r from-[#4B0082]/10 to-[#00A86B]/10">
+        <section className="w-full bg-gradient-to-r from-[#2ECC71]/20 to-[#2ECC71]/5 py-3">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+            <div className="grid gap-6 lg:grid-cols-[1fr_300px] lg:gap-12 xl:grid-cols-[1fr_400px]">
               <div className="flex flex-col md:pt-[20px] lg:pt-[100px] xl:pt-[150px] space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -79,10 +93,11 @@ export default function Page() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-[#4B0082] hover:bg-[#4B0082]/90">
-                    Join the Campaign
-                  </Button>
-                  <Button variant="outline">Learn More</Button>
+                  <Link href="#donate">
+                    <Button className="bg-[#4B0082] hover:bg-[#4B0082]/90">
+                      Support the Campaign
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <Image
@@ -96,21 +111,28 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="vision" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+        <section id="vision" className="w-full py-6 md:py-12 lg:py-16 relative">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage:
+                'url("/images/edmonton-back.webp?height=1080&width=1920")',
+            }}
+          />
+          <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
                   My Vision for Edmonton
                 </h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] text-gray-800 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Together, we can build a city that is safe, thriving, and
                   inclusive.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-              <Card className="relative overflow-hidden">
+              <Card className="relative overflow-hidden bg-white opacity-90">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <Heart className="h-12 w-12 text-[#4B0082]" />
                   <h3 className="text-xl font-bold">Tackling Homelessness</h3>
@@ -120,7 +142,7 @@ export default function Page() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="relative overflow-hidden">
+              <Card className="relative overflow-hidden bg-white opacity-90">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <Building2 className="h-12 w-12 text-[#00A86B]" />
                   <h3 className="text-xl font-bold">Supporting Schools</h3>
@@ -130,7 +152,7 @@ export default function Page() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="relative overflow-hidden">
+              <Card className="relative overflow-hidden bg-white opacity-90">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <Users className="h-12 w-12 text-[#4B0082]" />
                   <h3 className="text-xl font-bold">Protecting Seniors</h3>
@@ -140,7 +162,7 @@ export default function Page() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="relative overflow-hidden">
+              <Card className="relative overflow-hidden bg-white opacity-90">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <Car className="h-12 w-12 text-[#00A86B]" />
                   <h3 className="text-xl font-bold">Easing Traffic</h3>
@@ -150,7 +172,7 @@ export default function Page() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="relative overflow-hidden">
+              <Card className="relative overflow-hidden bg-white opacity-90">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <Brain className="h-12 w-12 text-[#4B0082]" />
                   <h3 className="text-xl font-bold">Breaking Barriers</h3>
@@ -160,7 +182,7 @@ export default function Page() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="relative overflow-hidden">
+              <Card className="relative overflow-hidden bg-white opacity-90">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <Coins className="h-12 w-12 text-[#00A86B]" />
                   <h3 className="text-xl font-bold">Responsible Spending</h3>
@@ -170,6 +192,13 @@ export default function Page() {
                   </p>
                 </CardContent>
               </Card>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <Link href="#donate">
+                <Button className="bg-[#4B0082] hover:bg-[#4B0082]/90">
+                  Learn more about our Vision
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -201,22 +230,31 @@ export default function Page() {
       </main>
 
       <footer className="w-full border-t py-6">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row md:py-0">
+        <div className="container flex flex-col items-center justify-between gap-4 md:flex-row md:py-0">
           <p className="text-center text-sm leading-loose text-gray-500 md:text-left">
             © 2025 Omar Mohammad Campaign. All rights reserved.
           </p>
           <div className="flex items-center space-x-4">
             <Link
-              href="/privacy"
-              className="text-sm text-gray-500 hover:underline"
+              href="https://facebook.com"
+              className="text-[#4B0082] hover:text-[#4B0082]/80"
             >
-              Privacy Policy
+              <Facebook className="h-5 w-5" />
+              <span className="sr-only">Facebook</span>
             </Link>
             <Link
-              href="/contact"
-              className="text-sm text-gray-500 hover:underline"
+              href="https://twitter.com"
+              className="text-[#4B0082] hover:text-[#4B0082]/80"
             >
-              Contact
+              <Twitter className="h-5 w-5" />
+              <span className="sr-only">X (Twitter)</span>
+            </Link>
+            <Link
+              href="https://instagram.com"
+              className="text-[#4B0082] hover:text-[#4B0082]/80"
+            >
+              <Instagram className="h-5 w-5" />
+              <span className="sr-only">Instagram</span>
             </Link>
           </div>
         </div>
