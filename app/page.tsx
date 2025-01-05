@@ -27,8 +27,8 @@ export default function Page() {
               <div className="flex flex-col justify-center">
                 <Image
                   src={"/images/omar-logo.png"}
-                  width={180}
-                  height={180}
+                  width={192}
+                  height={100}
                   alt="Omar Muhammad"
                 />
               </div>
@@ -37,8 +37,8 @@ export default function Page() {
               <div className="flex flex-col justify-center">
                 <Image
                   src={"/images/omar-logo.png"}
-                  width={100}
-                  height={100}
+                  width={96}
+                  height={50}
                   alt="Omar Muhammad"
                 />
               </div>
