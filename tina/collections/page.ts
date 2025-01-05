@@ -153,36 +153,6 @@ export const PageCollection: Collection = {
           ],
         },
         {
-          name: "featuredPosts",
-          label: "Featured Posts",
-          fields: [
-            {
-              name: "Posts",
-              label: "Featured Posts",
-              list: true,
-              type: "object",
-              ui: {
-                itemProps: (item) => {
-                  return { label: item.label }
-                },
-              },
-              fields: [
-                {
-                  name: "label",
-                  label: "Label",
-                  type: "string",
-                },
-                {
-                  name: "featuredPost",
-                  label: "Featured Post",
-                  type: "reference",
-                  collections: ["post"],
-                },
-              ],
-            },
-          ],
-        },
-        {
           name: "cardgrid2Col",
           label: "Card Grid with 2 Columns",
           ui: {

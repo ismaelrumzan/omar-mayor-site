@@ -35,9 +35,6 @@ export default defineConfig({
   schema: {
     collections: [
       PageCollection,
-      PostCollection,
-      FormCollection,
-      AuthorCollection,
       NavCollection,
       HeaderCollection,
       FooterCollection,

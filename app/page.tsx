@@ -8,11 +8,10 @@ import {
   Facebook,
   Heart,
   Instagram,
-  ShieldCheck,
-  Twitter,
   Users,
   X,
 } from "lucide-react"
+import { FaXTwitter } from "react-icons/fa6"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -59,13 +58,13 @@ export default function Page() {
               <nav className="flex justify-end items-center py-2 grow">
                 <div className="space-x-6 text-lg font-bold">
                   <Link
-                    href="#about"
+                    href="/about"
                     className="transition-colors hover:text-foreground/80"
                   >
                     About Omar
                   </Link>
                   <Link
-                    href="#about"
+                    href="/vision"
                     className="transition-colors hover:text-foreground/80"
                   >
                     My Vision
@@ -110,15 +109,10 @@ export default function Page() {
             </div>
           </div>
         </section>
-
-        <section id="vision" className="w-full py-6 md:py-12 lg:py-16 relative">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage:
-                'url("/images/edmonton-back.webp?height=1080&width=1920")',
-            }}
-          />
+        <section
+          id="vision"
+          className="w-full pt-6 pb-2 md:py-12 lg:py-16 relative"
+        >
           <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -202,10 +196,20 @@ export default function Page() {
             </div>
           </div>
         </section>
-
+        <section id="vision" className="w-full relative">
+          <div className="container relative">
+            <Image
+              src="/images/edmonton-skyline.png"
+              alt="Edmonton"
+              width={2400}
+              height={518}
+              className="mx-auto overflow-hidden object-cover"
+            />
+          </div>
+        </section>
         <section
           id="donate"
-          className="w-full py-12 md:py-24 lg:py-32 bg-[#4B0082]"
+          className="w-full py-12 md:py-24 lg:py-32 bg-[#13A14B]"
         >
           <div className="container px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">
@@ -222,7 +226,7 @@ export default function Page() {
                 </Button>
               ))}
             </div>
-            <Button className="mt-8 bg-[#00A86B] hover:bg-[#00A86B]/90">
+            <Button className="mt-8 bg-[#4B0082] hover:bg-[#4B0082]/90">
               Donate Now
             </Button>
           </div>
@@ -246,7 +250,7 @@ export default function Page() {
               href="https://twitter.com"
               className="text-[#4B0082] hover:text-[#4B0082]/80"
             >
-              <Twitter className="h-5 w-5" />
+              <FaXTwitter className="h-5 w-5" />
               <span className="sr-only">X (Twitter)</span>
             </Link>
             <Link
