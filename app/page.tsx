@@ -26,7 +26,7 @@ export default function Page() {
             <Link href="/" className="hidden md:flex items-center py-2">
               <div className="flex flex-col justify-center">
                 <Image
-                  src={"/images/logo-om.png"}
+                  src={"/images/omar-logo.png"}
                   width={180}
                   height={180}
                   alt="Omar Muhammad"
@@ -36,7 +36,7 @@ export default function Page() {
             <Link href="/" className="flex md:hidden items-center py-2">
               <div className="flex flex-col justify-center">
                 <Image
-                  src={"/images/logo-om.png"}
+                  src={"/images/omar-logo.png"}
                   width={100}
                   height={100}
                   alt="Omar Muhammad"
