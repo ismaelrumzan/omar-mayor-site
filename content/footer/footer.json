@@ -1,8 +1,8 @@
 {
   "social": {
-    "facebook": "myaccount",
-    "github": "ismaelrumzan"
+    "facebook": "https://facebook.com/",
+    "twitter": "https://twitter.com/",
+    "instagram": "https://instagram.com/"
   },
-  "copyright": "Your Org Name",
-  "backgroundColor": "primary"
+  "copyright": "Omar Mohammad Campaign. All rights reserved."
 }

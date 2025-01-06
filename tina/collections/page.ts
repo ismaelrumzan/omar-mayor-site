@@ -30,8 +30,8 @@ export const PageCollection: Collection = {
       list: true,
       templates: [
         {
-          name: "pageContent",
-          label: "Main Content",
+          name: "richContent",
+          label: "Rich Text Content",
           fields: [
             {
               name: "content",
@@ -90,22 +90,6 @@ export const PageCollection: Collection = {
                   name: "label",
                   label: "Link/Button Text",
                 },
-                {
-                  type: "string",
-                  name: "style",
-                  label: "Link type",
-                  options: ["simple", "button"],
-                },
-              ],
-            },
-            {
-              type: "string",
-              name: "backgroundType",
-              label: "Background Type",
-              description: "Only the type specified will be used",
-              options: [
-                { label: "Image", value: "image" },
-                { label: "Color", value: "color" },
               ],
             },
             {
@@ -113,54 +97,7 @@ export const PageCollection: Collection = {
               label: "Hero Background Image",
               type: "image",
             },
-            {
-              name: "backgroundColor",
-              label: "Hero Background Color",
-              type: "string",
-              ui: {
-                component: "color",
-              },
-            },
           ],
-        },
-        {
-          name: "coverSection",
-          label: "Cover Section",
-          fields: [
-            {
-              name: "headline",
-              type: "string",
-              label: "Cover Headline",
-            },
-            {
-              name: "content",
-              label: "Cover Content",
-              type: "rich-text",
-            },
-            {
-              name: "backgroundImage",
-              label: "Cover Background Image",
-              type: "image",
-            },
-            {
-              name: "backgroundColor",
-              label: "Background Color",
-              type: "string",
-              ui: {
-                component: "color",
-              },
-            },
-          ],
-        },
-        {
-          name: "cardgrid2Col",
-          label: "Card Grid with 2 Columns",
-          ui: {
-            itemProps: (item) => {
-              return { label: item.gridTitle }
-            },
-          },
-          fields: cardBlockItem,
         },
         {
           name: "cardgrid3Col",
@@ -173,14 +110,31 @@ export const PageCollection: Collection = {
           fields: cardBlockItem,
         },
         {
-          name: "cardgrid4Col",
-          label: "Card Grid with 4 Columns",
-          ui: {
-            itemProps: (item) => {
-              return { label: item.gridTitle }
+          name: "donationSection",
+          label: "Donation Section",
+          fields: [
+            {
+              name: "title",
+              label: "Donation Section Title",
+              type: "string",
             },
-          },
-          fields: cardBlockItem,
+            {
+              name: "donationType",
+              label: "Donation Format",
+              type: "string",
+              options: ["set-values", "custom-value", "set-with-custom"],
+            },
+            {
+              name: "donationButton",
+              label: "Donation Button Text",
+              type: "string",
+            },
+            {
+              name: "showTopImage",
+              label: "Show Top Image",
+              type: "boolean",
+            },
+          ],
         },
         {
           name: "gallery",
@@ -217,47 +171,6 @@ export const PageCollection: Collection = {
             {
               name: "galleryTitle",
               label: "Image Gallery Title",
-              type: "string",
-            },
-          ],
-        },
-        {
-          name: "collapsibleSection",
-          label: "Collapsible Blocks",
-          ui: {
-            itemProps: (item) => {
-              return { label: item.collapsibleTitle }
-            },
-          },
-          fields: [
-            {
-              name: "accordionBlock",
-              label: "Collapsible Block",
-              type: "object",
-              list: true,
-              ui: {
-                itemProps: (item) => {
-                  return { label: item.headline }
-                },
-              },
-              fields: [
-                {
-                  name: "headline",
-                  label: "Headline",
-                  type: "string",
-                },
-                {
-                  name: "content",
-                  label: "Content",
-                  type: "rich-text",
-                  description: "content for the collapsible block",
-                  templates: RichTextTemplates,
-                },
-              ],
-            },
-            {
-              name: "collapsibleTitle",
-              label: "Collapsible Elements Title",
               type: "string",
             },
           ],

@@ -1,18 +1,16 @@
 import { Collection } from "tinacms"
 
-import { backgroundColorOptions } from "./common"
-
 export const NavCollection: Collection = {
   name: "nav",
   label: "Nav (Sitewide)",
   path: "content/nav",
   format: "md",
   ui: {
+    global: true,
     allowedActions: {
       create: false,
       delete: false,
     },
-    global: true,
   },
   fields: [
     {
@@ -30,7 +28,9 @@ export const NavCollection: Collection = {
         {
           type: "string",
           name: "link",
-          label: "Relative or External Link",
+          label: "External or Relative Link",
+          description:
+            "Link with or without http/https - for relative links, you can use anchors; otherwise, prefer using page links",
         },
         {
           name: "linkedPage",
@@ -40,15 +40,14 @@ export const NavCollection: Collection = {
         },
         {
           type: "string",
-          name: "linkType",
-          label: "Link type",
-          options: ["relative", "page", "external"],
+          name: "linkStyle",
+          label: "Link Style",
+          options: ["button-primary", "button-secondary", "link-only"],
         },
         {
           type: "string",
-          name: "buttonStyle",
-          label: "Button type",
-          options: ["ghost", "default", "secondary"],
+          name: "location",
+          options: ["top-bar", "general-nav"],
         },
       ],
     },
@@ -75,29 +74,6 @@ export const HeaderCollection: Collection = {
   },
   fields: [
     {
-      name: "logo",
-      label: "Logo",
-      type: "image",
-    },
-    {
-      name: "logoTitle",
-      label: "Logo Title",
-      description: "Show a title next to the logo",
-      type: "string",
-    },
-    {
-      name: "logoWidth",
-      label: "Logo Width",
-      description: "Minimum Logo Width",
-      type: "number",
-    },
-    {
-      name: "logoHeight",
-      label: "Logo Height",
-      description: "Minimum Logo Height",
-      type: "number",
-    },
-    {
       name: "headerHeight",
       label: "Header Height",
       description: "Minimum Header Height",
@@ -114,45 +90,6 @@ export const HeaderCollection: Collection = {
       label: "Site Description",
       type: "string",
       description: "used for SEO description",
-    },
-    {
-      name: "navAlignment",
-      label: "Right align navigation",
-      description: "Left align when off, Right align when on",
-      type: "boolean",
-    },
-    {
-      type: "string",
-      name: "backgroundColor",
-      label: "Background color type",
-      options: backgroundColorOptions,
-    },
-    {
-      type: "object",
-      name: "ctaButton",
-      label: "Call to action button",
-      fields: [
-        { name: "title", type: "string" },
-        { name: "link", type: "string" },
-        {
-          name: "type",
-          type: "string",
-          options: ["relative", "absolute"],
-        },
-      ],
-    },
-    {
-      name: "darkmode",
-      label: "Show Dark/Light Mode Switcher",
-      description: "Placed on the top right. Light/Dark mode switcher",
-      type: "boolean",
-    },
-    {
-      name: "userlogin",
-      label: "Show Log in/Sign Up/Avatar",
-      description:
-        "Placed on the top right. Uses Kinde.com to manage the user authentication system",
-      type: "boolean",
     },
   ],
 }
@@ -183,7 +120,7 @@ export const FooterCollection: Collection = {
         },
         {
           type: "string",
-          label: "Twitter",
+          label: "Twitter X",
           name: "twitter",
         },
         {
@@ -191,28 +128,12 @@ export const FooterCollection: Collection = {
           label: "Instagram",
           name: "instagram",
         },
-        {
-          type: "string",
-          label: "Github",
-          name: "github",
-        },
-        {
-          type: "string",
-          label: "YouTube",
-          name: "youtube",
-        },
       ],
     },
     {
       name: "copyright",
       label: "Copyright notice",
       type: "string",
-    },
-    {
-      type: "string",
-      name: "backgroundColor",
-      label: "Background color type",
-      options: backgroundColorOptions,
     },
   ],
 }

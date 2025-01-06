@@ -64,4 +64,9 @@ export const cardBlockItem: any[] = [
     label: "Card Grid Title",
     type: "string",
   },
+  {
+    name: "gridDescription",
+    label: "Card Grid Description",
+    type: "rich-text",
+  },
 ]

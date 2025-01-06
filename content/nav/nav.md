@@ -1,23 +1,20 @@
 ---
 links:
-  - label: Home
-    link: /
-    linkedPage: content/pages/home.mdx
-    linkType: page
-    buttonStyle: ghost
-  - label: Gallery
-    linkedPage: content/pages/gallery.mdx
-    linkType: page
-    buttonStyle: ghost
-  - label: Blog
-    link: /blog
-    linkedPage: ''
-    linkType: relative
-    buttonStyle: ghost
-  - label: Contact
-    link: /contact
-    linkedPage: content/pages/contact.mdx
-    linkType: page
-    buttonStyle: ghost
+  - label: Become a supporter
+    link: /support#support-us
+    linkStyle: button-primary
+    location: top-bar
+  - label: Volunteer
+    link: /support#volunteer
+    linkStyle: button-secondary
+    location: top-bar
+  - label: About Omar
+    linkedPage: content/pages/about.mdx
+    linkStyle: link-only
+    location: general-nav
+  - label: My Vision
+    linkedPage: content/pages/vision.mdx
+    linkStyle: link-only
+    location: general-nav
 ---
 
