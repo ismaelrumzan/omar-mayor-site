@@ -42,7 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             defaultTheme="light"
             disableTransitionOnChange
           >
-            {children}
+            <div className="flex flex-col min-h-screen">{children}</div>
           </ThemeProvider>
         </body>
       </html>
