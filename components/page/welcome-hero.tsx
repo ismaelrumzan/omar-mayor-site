@@ -8,76 +8,48 @@ import { TinaMarkdown } from "tinacms/dist/rich-text"
 import { Button } from "@/components/ui/button"
 
 export function WelcomeHero(props: PageBlocksWelcomeHero) {
-  const backgroundColor = props.backgroundColor || "#ffffff"
-  const backgroundImage = props.backgroundImage
-    ? `${props.backgroundImage}`
-    : "none"
   return (
     <>
-      <section
-        className="relative flex h-[80vh] w-full items-center justify-center"
-        style={{ backgroundColor }}
-        data-tina-field={tinaField(props, "backgroundColor")}
-      >
-        {backgroundImage !== "none" && (
-          <div className="absolute inset-0 overflow-hidden">
+      <section className="w-full bg-gradient-to-r from-[#2ECC71]/20 to-[#2ECC71]/5 py-3">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-[1fr_300px] lg:gap-12 xl:grid-cols-[1fr_400px]">
+            <div className="flex flex-col md:pt-[20px] lg:pt-[100px] xl:pt-[150px] space-y-4">
+              <div className="space-y-2">
+                <h1
+                  className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                  data-tina-field={tinaField(props, "title")}
+                >
+                  {props.title}
+                </h1>
+                <p
+                  className="max-w-[600px] text-gray-500 md:text-xl"
+                  data-tina-field={tinaField(props, "message")}
+                >
+                  <TinaMarkdown content={props.message} />
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                {props.links?.map((item) => (
+                  <Link
+                    href={item?.link || ""}
+                    key={item?.label}
+                    data-tina-field={tinaField(item, "label")}
+                  >
+                    <Button className="bg-[#4B0082] hover:bg-[#4B0082]/90">
+                      {item?.label}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
+            </div>
             <Image
-              alt={props.title || ""}
-              className="size-full object-cover opacity-50"
-              height={1080}
-              src={backgroundImage}
-              style={{
-                aspectRatio: "1920/1080",
-                objectFit: "cover",
-              }}
-              width={1920}
+              src={props.backgroundImage || ""}
               data-tina-field={tinaField(props, "backgroundImage")}
+              alt={props.title || ""}
+              width={1083}
+              height={2541}
+              className="mx-auto overflow-hidden rounded-xl object-cover"
             />
-          </div>
-        )}
-        <div className="z-5 relative max-w-3xl px-4 text-center">
-          <h1
-            className="text-primary-foreground mb-4 text-5xl font-bold "
-            data-tina-field={tinaField(props, "title")}
-          >
-            {props.title}
-          </h1>
-          <div
-            className="prose text-primary-foreground [&_h3]:text-primary-foreground max-w-none"
-            data-tina-field={tinaField(props, "message")}
-          >
-            <TinaMarkdown content={props.message} />
-          </div>
-          <div className="flex items-center justify-center gap-5 py-12">
-            {props.links?.map((link) => {
-              switch (link?.style) {
-                case "button": {
-                  return (
-                    <Link
-                      data-tina-field={tinaField(link, "label")}
-                      key={link.label}
-                      href={link.link || ""}
-                    >
-                      <Button size="lg">{link.label}</Button>
-                    </Link>
-                  )
-                }
-                case "simple": {
-                  return (
-                    <Link
-                      data-tina-field={tinaField(link, "label")}
-                      key={link.label}
-                      href={link?.link || ""}
-                    >
-                      <Button size="lg" variant={"ghost"}>
-                        Learn More
-                        <ArrowRight className="ml-2 size-4" />
-                      </Button>
-                    </Link>
-                  )
-                }
-              }
-            })}
           </div>
         </div>
       </section>
