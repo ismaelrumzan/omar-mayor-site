@@ -25,38 +25,6 @@ export const cardBlockItem: any[] = [
         label: "Content",
         type: "rich-text",
       },
-      {
-        name: "links",
-        label: "Links",
-        type: "object",
-        list: true,
-        ui: {
-          itemProps: (item: { label: any }) => {
-            return { label: item.label }
-          },
-        },
-        fields: [
-          {
-            type: "string",
-            name: "link",
-            label: "Relative or absolute link",
-          },
-          {
-            type: "string",
-            name: "label",
-            label: "Button/Link Text",
-          },
-          {
-            type: "string",
-            name: "style",
-            label: "Link Type",
-            options: [
-              { label: "Simple link", value: "simple" },
-              { label: "Clickable Button", value: "button" },
-            ],
-          },
-        ],
-      },
     ],
   },
   {
@@ -68,5 +36,15 @@ export const cardBlockItem: any[] = [
     name: "gridDescription",
     label: "Card Grid Description",
     type: "rich-text",
+  },
+  {
+    type: "string",
+    name: "cta_link",
+    label: "Call to action link",
+  },
+  {
+    type: "string",
+    name: "cta_label",
+    label: "Call to action button text",
   },
 ]

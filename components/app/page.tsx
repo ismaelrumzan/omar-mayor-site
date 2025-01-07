@@ -5,7 +5,7 @@ import { useTina } from "tinacms/dist/react"
 
 import { ImageGallery } from "@/components//page/image-gallery"
 import { Footer } from "@/components/footer"
-import { CardGrid } from "@/components/page/card-grid"
+import { CardGridBlock } from "@/components/page/card-grid-block"
 import { PageContent } from "@/components/page/page-content"
 import { WelcomeHero } from "@/components/page/welcome-hero"
 import { SiteHeader } from "@/components/site-header"
@@ -29,14 +29,7 @@ export function PageComponent(props: {
                 return <WelcomeHero key={i} {...block} />
               }
               case "PageBlocksCardgrid3Col": {
-                return (
-                  <div
-                    key={block.gridTitle}
-                    className="container mx-auto grid grid-cols-1 gap-8 p-4 sm:grid-cols-2 md:grid-cols-3"
-                  >
-                    <CardGrid {...block} />
-                  </div>
-                )
+                return <CardGridBlock key={i} {...block} />
               }
               case "PageBlocksGallery": {
                 return <ImageGallery key={i} {...block} />
