@@ -65,13 +65,20 @@ export function SiteHeader({
           <div className="hidden md:flex flex-col items-end space-x-4">
             <div>
               {topNav?.map((item) => {
-                let buttonColor = "bg-[#00A86B] hover:bg-[#00A86B]/90"
+                let buttonColor = "bg-[#4B0082] hover:bg-[#4B0082]/90"
                 if (item?.linkStyle === "button-secondary") {
-                  buttonColor = "bg-[#90EE90] hover:bg-[#90EE90]/90"
+                  buttonColor = "bg-[#00A86B] hover:bg-[#00A86B]/90"
+                }
+                let navLink = ""
+                if (item?.linkedPage) {
+                  navLink =
+                    "/" + item.linkedPage?._sys.breadcrumbs.join("/") || ""
+                } else {
+                  navLink = item?.link as string
                 }
                 return (
                   <Link
-                    href={item?.link || ""}
+                    href={navLink}
                     key={item?.label}
                     data-tina-field={tinaField(item, "label")}
                   >
@@ -86,16 +93,25 @@ export function SiteHeader({
             </div>
             <nav className="flex justify-end items-center py-2 grow">
               <div className="space-x-6 text-lg font-bold">
-                {generalNav?.map((item) => (
-                  <Link
-                    key={item?.label}
-                    data-tina-field={tinaField(item, "label")}
-                    href={item?.link || ""}
-                    className="transition-colors hover:text-foreground/80"
-                  >
-                    {item?.label}
-                  </Link>
-                ))}
+                {generalNav?.map((item) => {
+                  let navLink = ""
+                  if (item?.linkedPage) {
+                    navLink =
+                      "/" + item.linkedPage?._sys.breadcrumbs.join("/") || ""
+                  } else {
+                    navLink = item?.link as string
+                  }
+                  return (
+                    <Link
+                      key={item?.label}
+                      data-tina-field={tinaField(item, "label")}
+                      href={navLink}
+                      className="transition-colors hover:text-foreground/80"
+                    >
+                      {item?.label}
+                    </Link>
+                  )
+                })}
               </div>
             </nav>
           </div>

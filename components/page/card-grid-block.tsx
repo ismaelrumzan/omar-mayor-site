@@ -24,7 +24,7 @@ export function CardGridBlock(props: PageBlocksCardgrid3Col): JSX.Element {
   const { cardblock } = props
   return (
     <section
-      id="vision"
+      id={props.id || "card-grid-block"}
       className="w-full pt-6 pb-2 md:py-12 lg:py-16 relative"
     >
       <div className="container px-4 md:px-6 relative">
@@ -49,7 +49,18 @@ export function CardGridBlock(props: PageBlocksCardgrid3Col): JSX.Element {
             return (
               <Card className="relative overflow-hidden bg-white opacity-90">
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <Heart className="h-12 w-12 text-[#4B0082]" />
+                  <Image
+                    src={item?.iconimage || ""}
+                    className="h-12 w-12"
+                    width={24}
+                    height={24}
+                    alt={item?.headline || ""}
+                    style={{
+                      filter:
+                        "invert(20%) sepia(100%) saturate(500%) hue-rotate(255deg) brightness(85%) contrast(110%)",
+                    }}
+                    data-tina-field={tinaField(item, "iconimage")}
+                  />
                   <h3
                     className="text-xl font-bold"
                     data-tina-field={tinaField(item, "headline")}

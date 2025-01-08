@@ -1,3 +1,5 @@
+import { Description } from "@radix-ui/react-dialog"
+
 export const cardBlockItem: any[] = [
   {
     name: "cardblock",
@@ -16,9 +18,11 @@ export const cardBlockItem: any[] = [
         type: "string",
       },
       {
-        name: "coverimage",
-        label: "Cover Image",
+        name: "iconimage",
+        label: "Icon Image",
         type: "image",
+        description:
+          "Use the site https://www.svgrepo.com/ to find an appropriate SVG icon",
       },
       {
         name: "content",
@@ -31,6 +35,12 @@ export const cardBlockItem: any[] = [
     name: "gridTitle",
     label: "Card Grid Title",
     type: "string",
+  },
+  {
+    name: "id",
+    label: "Card Section Anchor",
+    type: "string",
+    description: "To be able to link to this section",
   },
   {
     name: "gridDescription",

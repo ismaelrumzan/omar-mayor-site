@@ -41,6 +41,12 @@ export const PageCollection: Collection = {
               templates: RichTextTemplates,
             },
             {
+              name: "id",
+              label: "Rich content Anchor",
+              type: "string",
+              description: "To be able to link to this section",
+            },
+            {
               type: "string",
               name: "backgroundColor",
               label: "Background color type",
@@ -62,6 +68,12 @@ export const PageCollection: Collection = {
               name: "title",
               type: "string",
               label: "Hero Title",
+            },
+            {
+              name: "id",
+              label: "Hero Section Anchor",
+              type: "string",
+              description: "To be able to link to this section",
             },
             {
               name: "message",
@@ -90,6 +102,12 @@ export const PageCollection: Collection = {
                   name: "label",
                   label: "Link/Button Text",
                 },
+                {
+                  type: "string",
+                  name: "button_type",
+                  label: "Button color",
+                  options: ["primary", "secondary"],
+                },
               ],
             },
             {
@@ -117,6 +135,12 @@ export const PageCollection: Collection = {
               name: "title",
               label: "Donation Section Title",
               type: "string",
+            },
+            {
+              name: "id",
+              label: "Donation Section Anchor",
+              type: "string",
+              description: "To be able to link to this section",
             },
             {
               name: "donationType",

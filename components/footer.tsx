@@ -2,12 +2,17 @@ import React from "react"
 import Link from "next/link"
 import { PageAndNavQuery } from "@/tina/__generated__/types"
 import {
-  FacebookIcon,
-  GithubIcon,
-  InstagramIcon,
-  TwitterIcon,
-  YoutubeIcon,
+  Brain,
+  Building2,
+  Car,
+  Coins,
+  Facebook,
+  Heart,
+  Instagram,
+  Users,
+  X,
 } from "lucide-react"
+import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6"
 import { tinaField } from "tinacms/dist/react"
 
 import { buttonVariants } from "@/components/ui/button"
@@ -58,74 +63,48 @@ function SocialIcon({ platform, size = 24 }: SocialIconProps) {
 
   switch (platform.toLowerCase()) {
     case "twitter":
-      return <TwitterIcon {...iconProps} />
+      return <FaXTwitter {...iconProps} />
     case "facebook":
-      return <FacebookIcon {...iconProps} />
+      return <FaFacebook {...iconProps} />
     case "instagram":
-      return <InstagramIcon {...iconProps} />
-    case "github":
-      return <GithubIcon {...iconProps} />
-    case "youtube":
-      return <YoutubeIcon {...iconProps} />
+      return <FaInstagram {...iconProps} />
     default:
-      return <FacebookIcon {...iconProps} />
+      return <FaFacebook {...iconProps} />
   }
 }
 
 export function Footer({ footer }: { footer: PageAndNavQuery["footer"] }) {
   const year = React.useMemo(() => new Date().getFullYear(), [])
   const social = footer.social ? objectEntriesFilter(footer.social) : null
-  let bgStyle = ""
-  let textStyle = `text-primary`
-  if (footer.backgroundColor) {
-    bgStyle = `bg-${footer.backgroundColor}`
-  }
-  if (footer.backgroundColor === "primary") {
-    textStyle = `text-secondary`
-  }
   return (
-    <footer className={bgStyle}>
-      <div className="mx-auto max-w-7xl px-2 py-4 md:flex md:items-center md:justify-between lg:px-4">
-        <div className="flex min-w-[215px] justify-center md:justify-start">
-          <nav className={`items-center space-x-1`}>
-            {social &&
-              social.map((item) => {
-                const platformLink = getLink(item.platform as PlatformKey)
-                return (
-                  <Link
-                    href={`${platformLink}/${item?.handle}`}
-                    key={platformLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    data-tina-field={tinaField(footer, "social")}
-                  >
-                    <div
-                      className={buttonVariants({
-                        size: "sm",
-                        variant: "ghost",
-                      })}
-                    >
-                      <SocialIcon platform={item.platform} />
-                      <span className="sr-only">{item?.platform}</span>
-                    </div>
-                  </Link>
-                )
-              })}
-          </nav>
-        </div>
-        <div className="pb-2 md:pb-0">
-          <p
-            className={`${textStyle} text-center text-sm leading-5 md:text-left`}
-            data-tina-field={tinaField(footer, "copyright")}
+    <footer className="w-full border-t py-6">
+      <div className="container flex flex-col items-center justify-between gap-4 md:flex-row md:py-0">
+        <p className="text-center text-sm leading-loose text-gray-500 md:text-left">
+          © 2025 Omar Mohammad Campaign. All rights reserved.
+        </p>
+        <div className="flex items-center space-x-4">
+          <Link
+            href="https://facebook.com"
+            className="text-[#4B0082] hover:text-[#4B0082]/80"
           >
-            &copy; {year} {footer.copyright}
-          </p>
+            <Facebook className="h-5 w-5" />
+            <span className="sr-only">Facebook</span>
+          </Link>
+          <Link
+            href="https://twitter.com"
+            className="text-[#4B0082] hover:text-[#4B0082]/80"
+          >
+            <FaXTwitter className="h-5 w-5" />
+            <span className="sr-only">X (Twitter)</span>
+          </Link>
+          <Link
+            href="https://instagram.com"
+            className="text-[#4B0082] hover:text-[#4B0082]/80"
+          >
+            <Instagram className="h-5 w-5" />
+            <span className="sr-only">Instagram</span>
+          </Link>
         </div>
-        <SiteCredit
-          text="Built by Cordoba Digital Media"
-          link="https://cordobadigitalmedia.com"
-          footerbg={footer.backgroundColor || "secondary"}
-        />
       </div>
     </footer>
   )

@@ -34,7 +34,13 @@ export function WelcomeHero(props: PageBlocksWelcomeHero) {
                     key={item?.label}
                     data-tina-field={tinaField(item, "label")}
                   >
-                    <Button className="bg-[#4B0082] hover:bg-[#4B0082]/90">
+                    <Button
+                      className={
+                        item?.button_type === "primary"
+                          ? `bg-[#4B0082] hover:bg-[#4B0082]/90`
+                          : `bg-[#00A86B] hover:bg-[#00A86B]/90`
+                      }
+                    >
                       {item?.label}
                     </Button>
                   </Link>

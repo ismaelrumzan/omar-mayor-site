@@ -13,7 +13,7 @@ export function DonationBlock(props: PageBlocksDonationSection) {
   return (
     <>
       {props.showTopImage ? (
-        <section id="vision" className="w-full relative">
+        <section className="w-full relative">
           <div className="container relative">
             <Image
               src="/images/edmonton-skyline.png"
@@ -26,7 +26,7 @@ export function DonationBlock(props: PageBlocksDonationSection) {
         </section>
       ) : null}
       <section
-        id="donate"
+        id={props.id || "donation-block"}
         className="w-full py-12 md:py-24 lg:py-32 bg-[#13A14B]"
       >
         <div className="container px-4 md:px-6 text-center">
