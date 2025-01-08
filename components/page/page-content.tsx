@@ -1,10 +1,10 @@
-import { PageBlocksPageContent } from "@/tina/__generated__/types"
+import { PageBlocksRichContent } from "@/tina/__generated__/types"
 import { tinaField } from "tinacms/dist/react"
 import { TinaMarkdown } from "tinacms/dist/rich-text"
 
 import { components } from "./components"
 
-export function PageContent(props: PageBlocksPageContent) {
+export function PageContent(props: PageBlocksRichContent) {
   let bgStyle = ""
   if (props.backgroundColor) {
     bgStyle = `bg-${props.backgroundColor}`

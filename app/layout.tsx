@@ -1,12 +1,8 @@
 import "@/styles/globals.css"
 import "@/styles/styles.css"
 import type { Viewport } from "next"
-import {
-  Merriweather,
-  Montserrat,
-  Noto_Sans,
-  Noto_Serif,
-} from "next/font/google"
+import { Merriweather, Montserrat } from "next/font/google"
+import { Analytics } from "@vercel/analytics/react"
 
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -43,6 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             disableTransitionOnChange
           >
             <div className="flex flex-col min-h-screen">{children}</div>
+            <Analytics />
           </ThemeProvider>
         </body>
       </html>

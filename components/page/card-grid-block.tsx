@@ -3,17 +3,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { PageBlocksCardgrid3Col } from "@/tina/__generated__/types"
-import {
-  Brain,
-  Building2,
-  Car,
-  Coins,
-  Facebook,
-  Heart,
-  Instagram,
-  Users,
-  X,
-} from "lucide-react"
 import { tinaField } from "tinacms/dist/react"
 import { TinaMarkdown } from "tinacms/dist/rich-text"
 
