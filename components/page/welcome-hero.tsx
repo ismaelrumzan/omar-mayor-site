@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { PageBlocksWelcomeHero } from "@/tina/__generated__/types"
-import { ArrowRight } from "lucide-react"
 import { tinaField } from "tinacms/dist/react"
 import { TinaMarkdown } from "tinacms/dist/rich-text"
 

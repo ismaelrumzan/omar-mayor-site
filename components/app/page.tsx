@@ -10,6 +10,8 @@ import { PageContent } from "@/components/page/page-content"
 import { WelcomeHero } from "@/components/page/welcome-hero"
 import { SiteHeader } from "@/components/site-header"
 
+import { DonationBlock } from "../page/donation-block"
+
 export function PageComponent(props: {
   data: PageAndNavQuery
   variables: {
@@ -36,6 +38,9 @@ export function PageComponent(props: {
               }
               case "PageBlocksRichContent": {
                 return <PageContent key={i} {...block} />
+              }
+              case "PageBlocksDonationSection": {
+                return <DonationBlock key={i} {...block} />
               }
             }
           })}
