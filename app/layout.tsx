@@ -4,6 +4,7 @@ import type { Viewport } from "next"
 import { Merriweather, Montserrat } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 
+import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const viewport: Viewport = {
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           >
             <div className="flex flex-col min-h-screen">{children}</div>
             <Analytics />
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>
