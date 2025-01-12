@@ -44,7 +44,6 @@ export function DonationBlock(props: PageBlocksDonationSection) {
   const donationValues = props.donationValues
     ? props.donationValues.map((value) => value?.amount)
     : [25, 50, 100, 250, 1000, 2500]
-  console.log(donationValues)
   return (
     <>
       {props.showTopImage ? (
