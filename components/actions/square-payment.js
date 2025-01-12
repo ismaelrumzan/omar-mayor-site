@@ -9,7 +9,8 @@ BigInt.prototype.toJSON = function () {
 
 const { paymentsApi } = new Client({
   accessToken: process.env.SQUARE_TOKEN,
-  environment: "sandbox",
+  environment:
+    process.env.VERCEL_ENV === "production" ? "production" : "sandbox",
 })
 
 export async function submitPayment(sourceId, amount) {
