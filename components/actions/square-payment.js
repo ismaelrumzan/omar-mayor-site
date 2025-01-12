@@ -20,7 +20,7 @@ export async function submitPayment(sourceId, amount) {
       sourceId,
       amountMoney: {
         currency: "CAD",
-        amount: amount,
+        amount: amount * 100,
       },
     })
     return result
