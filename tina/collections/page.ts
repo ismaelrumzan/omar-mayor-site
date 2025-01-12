@@ -143,10 +143,22 @@ export const PageCollection: Collection = {
               description: "To be able to link to this section",
             },
             {
-              name: "donationType",
-              label: "Donation Format",
-              type: "string",
-              options: ["set-values", "custom-value", "set-with-custom"],
+              name: "donationValues",
+              label: "Donation Values",
+              type: "object",
+              ui: {
+                itemProps: (item) => {
+                  return { label: item.amount }
+                },
+              },
+              list: true,
+              fields: [
+                {
+                  name: "amount",
+                  label: "Amount",
+                  type: "number",
+                },
+              ],
             },
             {
               name: "donationButton",

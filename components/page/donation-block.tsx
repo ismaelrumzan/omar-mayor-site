@@ -41,6 +41,10 @@ export function DonationBlock(props: PageBlocksDonationSection) {
       variant: "destructive",
     })
   }
+  const donationValues = props.donationValues
+    ? props.donationValues.map((value) => value?.amount)
+    : [25, 50, 100, 250, 1000, 2500]
+  console.log(donationValues)
   return (
     <>
       {props.showTopImage ? (
@@ -68,15 +72,15 @@ export function DonationBlock(props: PageBlocksDonationSection) {
             {props.title}
           </h2>
           <div className="mx-auto mt-8 flex flex-wrap justify-center gap-4">
-            <ToggleGroup type="single">
-              {[25, 50, 100, 250, 1000, 2500].map((amount) => (
+            <ToggleGroup type="single" data-tina-field={tinaField(props)}>
+              {donationValues.map((amount) => (
                 <ToggleGroupItem
                   key={amount}
-                  value={amount.toString()}
+                  value={amount?.toString() as string}
                   variant="outline"
                   className="text-[#4B0082] hover:bg-white/90"
                   onClick={() => {
-                    setSelectedAmount(amount)
+                    setSelectedAmount(Number(amount))
                   }}
                 >
                   ${amount}
