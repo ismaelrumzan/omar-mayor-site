@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { ChangeEvent, useState } from "react"
 import Image from "next/image"
 import {
   PageBlocksDonationSection,
@@ -16,7 +16,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { Toggle } from "@/components/ui/toggle"
+import { Input } from "@/components/ui/input"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Payment } from "@/components/payment"
 
@@ -24,6 +24,7 @@ import { Label } from "../ui/label"
 
 export function DonationBlock(props: PageBlocksDonationSection) {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
+  const [customAmount, setCustomAmount] = useState<string>("")
   const [showPaymentDialog, setShowPaymentDialog] = useState(false)
   const { toast } = useToast()
   const handleSuccess = () => {
@@ -70,14 +71,23 @@ export function DonationBlock(props: PageBlocksDonationSection) {
           >
             {props.title}
           </h2>
-          <div className="mx-auto mt-8 flex flex-wrap justify-center gap-4">
-            <ToggleGroup type="single" data-tina-field={tinaField(props)}>
+          <div className="mx-auto mt-8 flex flex-wrap justify-center">
+            <ToggleGroup
+              type="single"
+              data-tina-field={tinaField(props)}
+              value={selectedAmount?.toString() || ""}
+              onValueChange={(value) => {
+                setSelectedAmount(value ? parseInt(value, 10) : null)
+                setCustomAmount("")
+              }}
+              className="gap-3 grid grid-cols-4"
+            >
               {donationValues.map((amount) => (
                 <ToggleGroupItem
                   key={amount}
                   value={amount?.toString() as string}
                   variant="outline"
-                  className="text-[#4B0082] hover:bg-white/90"
+                  className="text-white hover:bg-white/90 rounded-none p-3 text-lg"
                   onClick={() => {
                     setSelectedAmount(Number(amount))
                   }}
@@ -87,21 +97,35 @@ export function DonationBlock(props: PageBlocksDonationSection) {
               ))}
             </ToggleGroup>
           </div>
-          {selectedAmount === null ? (
-            <div className="mx-auto mt-2 flex flex-wrap justify-center text-gray-200">
-              <Label>Please select or type an amount</Label>
+          {selectedAmount === null && customAmount === "" ? (
+            <div className="mx-auto mt-3 flex flex-wrap justify-center text-gray-200">
+              <Label>Please select an amount or type a value below</Label>
             </div>
           ) : null}
-          <Button
-            className="mt-8 bg-[#4B0082] hover:bg-[#4B0082]/90"
-            data-tina-field={tinaField(props, "donationButton")}
-            disabled={selectedAmount === null}
-            onClick={() => {
-              setShowPaymentDialog(true)
-            }}
-          >
-            {props.donationButton}
-          </Button>
+          <div className="mt-4 mx-auto max-w-sm flex items-center justify-center gap-2 text-white">
+            $
+            <Input
+              type="number"
+              value={customAmount}
+              className="max-w-28 text-white text-lg"
+              min="1"
+              step="1"
+              onChange={(e) => {
+                setCustomAmount(e.target.value)
+                setSelectedAmount(null)
+              }}
+            />
+            <Button
+              className="bg-[#4B0082] hover:bg-[#4B0082]/90 flex-grow"
+              data-tina-field={tinaField(props, "donationButton")}
+              disabled={selectedAmount === null && customAmount === ""}
+              onClick={() => {
+                setShowPaymentDialog(true)
+              }}
+            >
+              {props.donationButton}
+            </Button>
+          </div>
         </div>
       </section>
       <Dialog open={showPaymentDialog} onOpenChange={setShowPaymentDialog}>
@@ -109,13 +133,29 @@ export function DonationBlock(props: PageBlocksDonationSection) {
           <DialogHeader>
             <DialogTitle>Complete Your Donation</DialogTitle>
             <DialogDescription>
-              Your donation of <b>${selectedAmount} CAD</b> helps support our
-              campaign for a better Edmonton.
+              Your donation of{" "}
+              <b>
+                $
+                {selectedAmount === null
+                  ? Number(customAmount)
+                  : selectedAmount}{" "}
+                CAD
+              </b>{" "}
+              helps support our campaign for a better Edmonton.
             </DialogDescription>
           </DialogHeader>
-          {selectedAmount && (
+          {selectedAmount !== null && (
             <Payment
               amount={selectedAmount}
+              onError={handleError}
+              onSuccess={handleSuccess}
+            />
+          )}
+          {customAmount !== "" && (
+            <Payment
+              amount={
+                selectedAmount === null ? Number(customAmount) : selectedAmount
+              }
               onError={handleError}
               onSuccess={handleSuccess}
             />
