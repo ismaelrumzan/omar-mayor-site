@@ -18,7 +18,7 @@ export function WelcomeHero(props: PageBlocksWelcomeHero) {
                   className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                   data-tina-field={tinaField(props, "title")}
                 >
-                  {props.title}
+                  <TinaMarkdown content={props.title} />
                 </h1>
                 <p
                   className="max-w-[600px] text-gray-500 md:text-xl"
