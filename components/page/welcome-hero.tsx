@@ -50,7 +50,7 @@ export function WelcomeHero(props: PageBlocksWelcomeHero) {
             <Image
               src={props.backgroundImage || ""}
               data-tina-field={tinaField(props, "backgroundImage")}
-              alt={props.title || ""}
+              alt={props.hero_title || ""}
               width={1083}
               height={2541}
               className="mx-auto overflow-hidden rounded-xl object-cover"
