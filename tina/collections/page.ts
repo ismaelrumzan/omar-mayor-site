@@ -65,7 +65,7 @@ export const PageCollection: Collection = {
           label: "Hero Section",
           fields: [
             {
-              name: "title",
+              name: "hero_title",
               type: "rich-text",
               label: "Hero Title",
             },
