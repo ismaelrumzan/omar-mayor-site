@@ -14,9 +14,5 @@ links:
     linkedPage: content/pages/about.mdx
     linkStyle: link-only
     location: general-nav
-  - label: My Vision
-    linkedPage: content/pages/vision.mdx
-    linkStyle: link-only
-    location: general-nav
 ---
 
