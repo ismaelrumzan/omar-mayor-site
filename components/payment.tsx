@@ -29,9 +29,8 @@ export function Payment({
   const [city, setCity] = useState("")
   const [province, setProvince] = useState("")
   const [postal, setPostalCode] = useState("")
-  const [customerId, setCustomerId] = useState<string | null>(null)
+  const [phone, setPhone] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
   const [showReceipt, setShowReceipt] = useState(false)
 
   function checkInfo(): boolean {
@@ -55,7 +54,7 @@ export function Payment({
       {showPersonalInfo ? (
         <div className="flex flex-col gap-4">
           <div>
-            <Label htmlFor="fullName">Full Name</Label>
+            <Label htmlFor="fullName">Full Name*</Label>
             <Input
               id="fullName"
               value={fullName}
@@ -63,18 +62,29 @@ export function Payment({
               required
             />
           </div>
-          <div>
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="email">Email*</Label>
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <Label htmlFor="phone">Phone Number</Label>
+              <Input
+                id="phone"
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
           </div>
           <div>
-            <Label htmlFor="address">Address</Label>
+            <Label htmlFor="address">Address*</Label>
             <Input
               id="address"
               value={address}
@@ -84,7 +94,7 @@ export function Payment({
           </div>
           <div className="grid grid-cols-3 gap-4">
             <div>
-              <Label htmlFor="city">City</Label>
+              <Label htmlFor="city">City*</Label>
               <Input
                 id="city"
                 value={city}
@@ -131,7 +141,9 @@ export function Payment({
               const saveRecord = await createPaymentRecord(
                 {
                   fullName,
+
                   emailAddress: email,
+                  phone,
                   address: {
                     addressLine: address,
                     city,

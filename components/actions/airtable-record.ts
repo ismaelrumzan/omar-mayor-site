@@ -12,6 +12,7 @@ export async function createPaymentRecord(
   customerData: {
     fullName: string
     emailAddress: string
+    phone: string
     address: {
       addressLine: string
       city: string
@@ -34,6 +35,7 @@ export async function createPaymentRecord(
           PaymentID: paymentData.PaymentID,
           "Full Name": customerData.fullName,
           Email: customerData.emailAddress,
+          Phone: customerData.phone,
           Amount: paymentData.Amount,
           Submitted: paymentData.createdAt.split("T")[0],
           OrderID: paymentData.orderId,
