@@ -83,7 +83,7 @@ export function Footer({ footer }: { footer: PageAndNavQuery["footer"] }) {
           className="text-center text-sm leading-loose text-gray-500 md:text-left"
           data-tina-field={tinaField(footer, "copyright")}
         >
-          &copy; {year} Omar Mohammad Campaign. All rights reserved.
+          &copy; {year} {footer.copyright}
         </p>
         <div className="flex items-center space-x-4">
           {social &&
