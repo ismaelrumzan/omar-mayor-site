@@ -7,6 +7,14 @@ export const RichTextTemplates: Template[] = [
     fields: [{ name: "src", label: "Google map embed URL", type: "string" }],
   },
   {
+    name: "Image",
+    label: "Content Image",
+    fields: [
+      { name: "src", label: "Image Source", type: "image" },
+      { name: "alt", label: "Image Alt", type: "string" },
+    ],
+  },
+  {
     name: "Youtube",
     label: "Youtube Video",
     fields: [{ name: "id", label: "Video ID", type: "string" }],

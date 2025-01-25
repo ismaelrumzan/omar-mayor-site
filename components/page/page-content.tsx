@@ -14,8 +14,8 @@ export function PageContent(props: PageBlocksRichContent) {
     textAlign = `text-${props.textAlign}`
   }
   return (
-    <section className={`w-full px-4 py-8 ${bgStyle} ${textAlign}`}>
-      <div className="container mx-auto">
+    <section className={`w-full ${bgStyle} ${textAlign}`}>
+      <div className="container py-4 px-4">
         <div
           className="prose max-w-none"
           data-tina-field={tinaField(props, "content")}

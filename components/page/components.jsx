@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { GoogleMap } from "@/components/ui/iframe-googlemap"
 import { VideoPlayer } from "@/components/ui/iframe-video"
@@ -17,6 +19,9 @@ export const components = {
       </Alert>
     )
   },
+  Image: (props) => {
+    return <img src={props.src} alt={props.alt} className="object-contain" />
+  },
   a: (props) => {
     if (
       props.url &&
@@ -34,8 +39,8 @@ export const components = {
       )
     } else {
       return (
-        <a href={url} {...props}>
-          {children}
+        <a href={props.url} {...props}>
+          {props.children}
         </a>
       )
     }

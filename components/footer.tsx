@@ -79,31 +79,37 @@ export function Footer({ footer }: { footer: PageAndNavQuery["footer"] }) {
   return (
     <footer className="w-full border-t py-6">
       <div className="container flex flex-col items-center justify-between gap-4 md:flex-row md:py-0">
-        <p className="text-center text-sm leading-loose text-gray-500 md:text-left">
-          © 2025 Omar Mohammad Campaign. All rights reserved.
+        <p
+          className="text-center text-sm leading-loose text-gray-500 md:text-left"
+          data-tina-field={tinaField(footer, "copyright")}
+        >
+          &copy; {year} Omar Mohammad Campaign. All rights reserved.
         </p>
         <div className="flex items-center space-x-4">
-          <Link
-            href="https://facebook.com"
-            className="text-[#4B0082] hover:text-[#4B0082]/80"
-          >
-            <Facebook className="h-5 w-5" />
-            <span className="sr-only">Facebook</span>
-          </Link>
-          <Link
-            href="https://twitter.com"
-            className="text-[#4B0082] hover:text-[#4B0082]/80"
-          >
-            <FaXTwitter className="h-5 w-5" />
-            <span className="sr-only">X (Twitter)</span>
-          </Link>
-          <Link
-            href="https://instagram.com"
-            className="text-[#4B0082] hover:text-[#4B0082]/80"
-          >
-            <Instagram className="h-5 w-5" />
-            <span className="sr-only">Instagram</span>
-          </Link>
+          {social &&
+            social.map((item) => {
+              const platformLink = getLink(item.platform as PlatformKey)
+              return (
+                <Link
+                  className="text-[#4B0082] hover:text-[#4B0082]/80"
+                  href={`${platformLink}/${item?.handle}`}
+                  key={platformLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-tina-field={tinaField(footer, "social")}
+                >
+                  <div
+                    className={buttonVariants({
+                      size: "sm",
+                      variant: "ghost",
+                    })}
+                  >
+                    <SocialIcon platform={item.platform} />
+                    <span className="sr-only">{item?.platform}</span>
+                  </div>
+                </Link>
+              )
+            })}
         </div>
       </div>
     </footer>

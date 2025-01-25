@@ -1,8 +1,20 @@
 import { AnyField, Collection, Field, Template } from "tinacms"
+import { ToolbarOverrideType } from "tinacms/dist/toolkit/fields/plugins/mdx-field-plugin/plate/toolbar/toolbar-overrides"
 
 import { cardBlockItem } from "../templates/card-grid"
 import { RichTextTemplates } from "../templates/rich-text-templates"
 import { backgroundColorOptions } from "./common"
+
+type toolbarItemName = Exclude<ToolbarOverrideType, "table">
+
+const richTextToolbar: toolbarItemName[] = [
+  "heading",
+  "bold",
+  "italic",
+  "embed",
+  "ol",
+  "ul",
+]
 
 export const PageCollection: Collection = {
   name: "page",
@@ -38,6 +50,7 @@ export const PageCollection: Collection = {
               type: "rich-text",
               label: "Content",
               description: "Rich content for page",
+              toolbarOverride: richTextToolbar,
               templates: RichTextTemplates,
             },
             {
