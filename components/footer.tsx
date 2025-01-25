@@ -77,7 +77,7 @@ export function Footer({ footer }: { footer: PageAndNavQuery["footer"] }) {
   const year = React.useMemo(() => new Date().getFullYear(), [])
   const social = footer.social ? objectEntriesFilter(footer.social) : null
   return (
-    <footer className="w-full border-t py-6">
+    <footer className="w-full border-t py-3">
       <div className="container flex flex-col items-center justify-between gap-4 md:flex-row md:py-0">
         <p
           className="text-center text-sm leading-loose text-gray-500 md:text-left"
@@ -112,6 +112,12 @@ export function Footer({ footer }: { footer: PageAndNavQuery["footer"] }) {
             })}
         </div>
       </div>
+      <SiteCredit
+        text="Built by Cordoba Digital Media"
+        link="https://cordobadigitalmedia.com"
+        showLogo={false}
+        footerbg={"secondary"}
+      />
     </footer>
   )
 }

@@ -5,9 +5,15 @@ interface SiteCreditProps {
   text: string
   link: string
   footerbg: string
+  showLogo?: boolean
 }
 
-export function SiteCredit({ text, link, footerbg }: SiteCreditProps) {
+export function SiteCredit({
+  text,
+  link,
+  footerbg,
+  showLogo = true,
+}: SiteCreditProps) {
   return (
     <Link
       href={link}
@@ -21,13 +27,15 @@ export function SiteCredit({ text, link, footerbg }: SiteCreditProps) {
       >
         {text}
       </span>
-      <Image
-        className="flex items-center rounded-full bg-white p-1 hover:bg-slate-400"
-        src="/lawh-icon.png"
-        width={28}
-        height={28}
-        alt="Built by CordobaDM"
-      />
+      {showLogo ? (
+        <Image
+          className="flex items-center rounded-full bg-white p-1 hover:bg-slate-400"
+          src="/lawh-icon.png"
+          width={28}
+          height={28}
+          alt="Built by CordobaDM"
+        />
+      ) : null}
     </Link>
   )
 }
