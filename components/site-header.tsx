@@ -1,43 +1,17 @@
-"use client"
-
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { PageAndNavQuery } from "@/tina/__generated__/types"
-import { Menu } from "lucide-react"
-import { tinaField } from "tinacms/dist/react"
-
 import { Button } from "@/components/ui/button"
-import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogTrigger,
-} from "@/components/ui/dialog"
 import { MobileMenu } from "@/components/mobile-menu"
-import { ThemeToggle } from "@/components/theme-toggle"
-
-type ButtonVariants =
-  | "link"
-  | "default"
-  | "destructive"
-  | "outline"
-  | "secondary"
-  | "ghost"
-  | null
-  | undefined
+import { Header, Media } from "@/payload-types"
 
 export function SiteHeader({
-  nav,
-  header,
+  headerContent,
 }: {
-  nav: PageAndNavQuery["nav"]
-  header: PageAndNavQuery["header"]
+  headerContent: Header
 }) {
-  const topNav = nav.links?.filter((item) => item?.location === "top-bar")
-  const generalNav = nav.links?.filter(
-    (item) => item?.location === "general-nav"
-  )
+  const image = headerContent.logo as Media;
+  const navLinks = headerContent.navLinks as Header["navLinks"];
   return (
     <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-[#2ECC71]/20 to-[#2ECC71]/5 bg-white">
       <div className="container flex flex-col px-4">
@@ -45,42 +19,34 @@ export function SiteHeader({
           <Link href="/" className="hidden md:flex items-center py-2">
             <div className="flex flex-col justify-center">
               <Image
-                src={"/images/logo-omar-shine.png"}
+                src={image.url as string}
                 width={259}
                 height={100}
-                alt="Omar Muhammad"
+                alt={image.alt as string}
               />
             </div>
           </Link>
           <Link href="/" className="flex md:hidden items-center py-2">
             <div className="flex flex-col justify-center">
               <Image
-                src={"/images/logo-omar-shine.png"}
+                src={image.url as string}
                 width={130}
                 height={50}
-                alt="Omar Muhammad"
+                alt={image.alt as string}
               />
             </div>
           </Link>
           <div className="hidden md:flex flex-col items-end space-x-4">
             <div>
-              {topNav?.map((item) => {
+              {navLinks?.filter(item => item.location === "top").map((item) => {
                 let buttonColor = "bg-[#4B0082] hover:bg-[#4B0082]/90"
-                if (item?.linkStyle === "button-secondary") {
+                if (item.style === "secondary") {
                   buttonColor = "bg-[#00A86B] hover:bg-[#00A86B]/90"
-                }
-                let navLink = ""
-                if (item?.linkedPage) {
-                  navLink =
-                    "/" + item.linkedPage?._sys.breadcrumbs.join("/") || ""
-                } else {
-                  navLink = item?.link as string
                 }
                 return (
                   <Link
-                    href={navLink}
+                    href={item.url as string}
                     key={item?.label}
-                    data-tina-field={tinaField(item, "label")}
                   >
                     <Button
                       className={`rounded-t-none round-b-lg ${buttonColor} text-white font-bold`}
@@ -93,19 +59,11 @@ export function SiteHeader({
             </div>
             <nav className="flex justify-end items-center py-2 grow">
               <div className="space-x-6 text-lg font-bold">
-                {generalNav?.map((item) => {
-                  let navLink = ""
-                  if (item?.linkedPage) {
-                    navLink =
-                      "/" + item.linkedPage?._sys.breadcrumbs.join("/") || ""
-                  } else {
-                    navLink = item?.link as string
-                  }
+                {navLinks?.filter(item => item.location === "bottom").map((item) => {
                   return (
                     <Link
                       key={item?.label}
-                      data-tina-field={tinaField(item, "label")}
-                      href={navLink}
+                      href={item.url as string}
                       className="transition-colors hover:text-foreground/80"
                     >
                       {item?.label}
@@ -115,7 +73,7 @@ export function SiteHeader({
               </div>
             </nav>
           </div>
-          <MobileMenu topNav={topNav} generalNav={generalNav} />
+          <MobileMenu navLinks={navLinks} />
         </div>
       </div>
     </header>
