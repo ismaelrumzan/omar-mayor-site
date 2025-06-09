@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/qrscan1",
+        destination: "/",
+        permanent: true,
+      },
+    ]
+  },
   async rewrites() {
     return [
       {
