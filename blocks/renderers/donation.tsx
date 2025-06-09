@@ -1,11 +1,8 @@
+﻿"use client"
+
 import { ChangeEvent, useState } from "react"
 import Image from "next/image"
-import {
-  PageBlocksDonationSection,
-  PageBlocksWelcomeHero,
-} from "@/tina/__generated__/types"
-import { tinaField } from "tinacms/dist/react"
-import { TinaMarkdown } from "tinacms/dist/rich-text"
+import { Donation } from "@/payload-types"
 
 import { useToast } from "@/hooks/use-toast"
 import { Button } from "@/components/ui/button"
@@ -17,12 +14,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Payment } from "@/components/payment"
 
-import { Label } from "../ui/label"
-
-export function DonationBlock(props: PageBlocksDonationSection) {
+export function DonationBlock({ content }: { content: Donation }) {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
   const [customAmount, setCustomAmount] = useState<string>("")
   const [showPaymentDialog, setShowPaymentDialog] = useState(false)
@@ -42,39 +38,33 @@ export function DonationBlock(props: PageBlocksDonationSection) {
       variant: "destructive",
     })
   }
-  const donationValues = props.donationValues
-    ? props.donationValues.map((value) => value?.amount)
+  const donationValues = content.amounts
+    ? content.amounts
     : [25, 50, 100, 250, 1000, 2500]
   return (
     <>
-      {props.showTopImage ? (
-        <section className="w-full relative">
-          <div className="container relative">
-            <Image
-              src="/images/edmonton-skyline.png"
-              alt="Edmonton"
-              width={2400}
-              height={518}
-              className="mx-auto overflow-hidden object-cover"
-            />
-          </div>
-        </section>
-      ) : null}
+      <section className="w-full relative">
+        <div className="container relative">
+          <Image
+            src="/images/edmonton-skyline.png"
+            alt="Edmonton"
+            width={2400}
+            height={518}
+            className="mx-auto overflow-hidden object-cover"
+          />
+        </div>
+      </section>
       <section
-        id={props.id || "donation-block"}
+        id={content.id || "donation-block"}
         className="w-full py-12 md:py-24 lg:py-32 bg-[#13A14B]"
       >
         <div className="container px-4 md:px-6 text-center">
-          <h2
-            className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl"
-            data-tina-field={tinaField(props, "title")}
-          >
-            {props.title}
+          <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">
+            {content.title || ""}
           </h2>
           <div className="mx-auto mt-8 flex flex-wrap justify-center">
             <ToggleGroup
               type="single"
-              data-tina-field={tinaField(props)}
               value={selectedAmount?.toString() || ""}
               onValueChange={(value) => {
                 setSelectedAmount(value ? parseInt(value, 10) : null)
@@ -103,27 +93,30 @@ export function DonationBlock(props: PageBlocksDonationSection) {
             </div>
           ) : null}
           <div className="mt-4 mx-auto max-w-sm flex items-center justify-center gap-2 text-white">
-            $
-            <Input
-              type="number"
-              value={customAmount}
-              className="max-w-28 text-white text-lg"
-              min="1"
-              step="1"
-              onChange={(e) => {
-                setCustomAmount(e.target.value)
-                setSelectedAmount(null)
-              }}
-            />
+            {content.allowCustom && content.allowCustom === true && (
+              <>
+                $
+                <Input
+                  type="number"
+                  value={customAmount}
+                  className="max-w-28 text-white text-lg"
+                  min="1"
+                  step="1"
+                  onChange={(e) => {
+                    setCustomAmount(e.target.value)
+                    setSelectedAmount(null)
+                  }}
+                />
+              </>
+            )}
             <Button
               className="bg-[#4B0082] hover:bg-[#4B0082]/90 flex-grow"
-              data-tina-field={tinaField(props, "donationButton")}
               disabled={selectedAmount === null && customAmount === ""}
               onClick={() => {
                 setShowPaymentDialog(true)
               }}
             >
-              {props.donationButton}
+              Donate now
             </Button>
           </div>
         </div>

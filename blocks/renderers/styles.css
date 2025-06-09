@@ -1,0 +1,46 @@
+﻿.video-section {
+  width: 100%;
+  background-color: #00A86B;
+  padding: 12px;
+}
+
+@media (min-width: 768px) {
+  .video-section {
+    padding: 24px;
+  }
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.video-title {
+  font-size: 1.875rem;
+  color: white;
+  margin: 0;
+}
+
+.responsive-video-wrapper {
+  width: 100%;
+  max-width: 56rem; /* equivalent to max-w-4xl */
+}
+
+.video-aspect-ratio {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625 or 56.25%) */
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}

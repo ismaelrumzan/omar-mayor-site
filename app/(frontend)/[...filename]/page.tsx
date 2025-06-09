@@ -1,41 +1,68 @@
 import React from "react"
 import type { Metadata } from "next"
-import client from "@/tina/__generated__/client"
+import { DonationBlock } from "@/blocks/renderers/donation"
 
-import { PageComponent } from "@/components/app/page"
+import {
+  pageSlugs,
+  queryDonation,
+  queryFooter,
+  queryHeader,
+  queryPagebySlug,
+} from "@/lib/queries/payload"
+import { Footer } from "@/components/footer"
+import { PageRenderer } from "@/components/page-renderer"
+import { SiteHeader } from "@/components/site-header"
 
 export default async function Page({
   params,
 }: {
   params: Promise<{ filename: string[] }>
 }) {
-  const result = await client.queries.pageAndNav({
-    relativePath: `${(await params).filename}.mdx`,
-  })
-  return <PageComponent {...result} />
+  const headerContent = await queryHeader()
+  const footerContent = await queryFooter()
+  const donationContent = await queryDonation()
+  const pageContent = await queryPagebySlug(`${(await params).filename}`)
+  if (!headerContent || !footerContent) return null
+  return (
+    <>
+      <SiteHeader headerContent={headerContent} />
+      <div className="flex min-h-[calc(100vh-120px)] flex-col">
+        <div className="grow">
+          {pageContent && <PageRenderer page={pageContent} />}
+          {pageContent?.showDonation && donationContent && (
+            <DonationBlock content={donationContent} />
+          )}
+        </div>
+        <Footer footer={footerContent} />
+      </div>
+    </>
+  )
 }
 
-export async function generateMetadata(): Promise<Metadata> {
-  const headerQuery = await client.queries.headerConnection()
-  const headerData = headerQuery.data.headerConnection.edges
-    ? headerQuery.data.headerConnection.edges[0]?.node
-    : undefined
-  const title = headerData?.siteTitle || ""
-  const description = headerData?.siteDescription || ""
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ filename: string[] }>
+}): Promise<Metadata> {
+  const pageContent = await queryPagebySlug(`${(await params).filename}`)
   return {
-    title: title,
-    description: description,
+    title: pageContent?.title,
+    description: pageContent?.meta?.description,
     openGraph: {
-      title: title,
+      title: pageContent?.title || '',
     },
   }
 }
 
 export async function generateStaticParams() {
-  const pages = await client.queries.pageConnection()
-  const paths = pages.data?.pageConnection.edges?.map((edge) => ({
-    filename: edge?.node?._sys.breadcrumbs,
-  }))
+  const pageSlugsPromise = await pageSlugs();
+  return pageSlugsPromise.map((item) => {
+    // Skip items without a slug
+    if (!item.slug) return null;
 
-  return paths || []
+    // Return the params object with optional grade
+    return {
+      filename: item.slug,
+    };
+  });
 }

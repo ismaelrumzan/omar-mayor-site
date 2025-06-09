@@ -7,11 +7,29 @@ import type { CollectionConfig } from "payload"
 
 import { anyone } from "../access/anyone"
 import { authenticated } from "../access/authenticated"
+import { revalidateDelete, revalidatePage } from "./hooks/revalidatePage"
+import { generatePreviewPath } from "@/lib/generate-preview-path"
 
 export const Pages: CollectionConfig = {
   slug: "pages",
   admin: {
     useAsTitle: "title",
+    preview: (data, { req }) =>
+      generatePreviewPath({
+        slug: typeof data?.slug === "string" ? data.slug : "",
+        collection: "pages",
+        req,
+      }),
+    livePreview: {
+      url: ({ data, req }) => {
+        const path = generatePreviewPath({
+          slug: typeof data?.slug === "string" ? data.slug : "",
+          collection: "pages",
+          req,
+        });
+        return path;
+      },
+    },    
   },
   access: {
     create: authenticated,
@@ -52,4 +70,17 @@ export const Pages: CollectionConfig = {
     },
     ...slugField(),
   ],
+  hooks: {
+    afterChange: [revalidatePage],
+    afterDelete: [revalidateDelete],
+  },
+  versions: {
+    drafts: {
+      autosave: {
+        interval: 50, // We set this interval for optimal live preview
+      },
+      schedulePublish: true,
+    },
+    maxPerDoc: 20,
+  },  
 }
