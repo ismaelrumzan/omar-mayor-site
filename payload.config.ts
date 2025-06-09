@@ -1,6 +1,7 @@
 ﻿import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload'
+import sharp from 'sharp'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
@@ -25,6 +26,7 @@ export default buildConfig({
     url: process.env.DATABASE_URI || '',
     connectOptions: { dbName: process.env.PAYLOAD_DB_NAME }
   }),
+  sharp,
   plugins: [
     vercelBlobStorage({
       enabled: true, // Optional, defaults to true

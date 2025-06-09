@@ -19,38 +19,25 @@ export const Media: CollectionConfig = {
   upload: {
     adminThumbnail: "thumbnail",
     focalPoint: true,
-    imageSizes: [
+        imageSizes: [
       {
-        name: "thumbnail",
-        width: 300,
+        name: 'thumbnail',
+        width: 400,
+        height: 300,
+        position: 'centre',
       },
       {
-        name: "square",
-        width: 500,
-        height: 500,
+        name: 'card',
+        width: 768,
+        height: 1024,
+        position: 'centre',
       },
       {
-        name: "small",
-        width: 600,
+        name: 'tablet',
+        width: 1024,
+        height: undefined,
+        position: 'centre',
       },
-      {
-        name: "medium",
-        width: 900,
-      },
-      {
-        name: "large",
-        width: 1400,
-      },
-      {
-        name: "xlarge",
-        width: 1920,
-      },
-      {
-        name: "og",
-        width: 1200,
-        height: 630,
-        crop: "center",
-      },
-    ],
+    ]
   },
 };

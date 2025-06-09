@@ -22,6 +22,7 @@ export const revalidatePage: CollectionAfterChangeHook<Page> = async ({
         payload.logger.info(`Revalidating page at path: /`)
       } else {
         revalidatePath(path)
+        revalidatePath("/")
         payload.logger.info(`Revalidating page at path: ${path}`)
       }
     }
