@@ -128,6 +128,11 @@ export const FooterCollection: Collection = {
           label: "Instagram",
           name: "instagram",
         },
+        {
+          type: "string",
+          label: "Youtube",
+          name: "youtube",
+        },
       ],
     },
     {
