@@ -71,6 +71,15 @@ export function DonationBlock(props: PageBlocksDonationSection) {
           >
             {props.title}
           </h2>
+          <div className="w-full flex justify-center pt-2">
+            <p
+              className="text-sm tracking-tighter text-gray-100 sm:text-lg max-w-xl"
+              data-tina-field={tinaField(props, "subtitle")}
+            >
+              {props.subtitle}
+            </p>
+          </div>
+
           <div className="mx-auto mt-8 flex flex-wrap justify-center">
             <ToggleGroup
               type="single"
@@ -99,22 +108,26 @@ export function DonationBlock(props: PageBlocksDonationSection) {
           </div>
           {selectedAmount === null && customAmount === "" ? (
             <div className="mx-auto mt-3 flex flex-wrap justify-center text-gray-200">
-              <Label>Please select an amount or type a value below</Label>
+              <Label>{props.instructions}</Label>
             </div>
           ) : null}
           <div className="mt-4 mx-auto max-w-sm flex items-center justify-center gap-2 text-white">
-            $
-            <Input
-              type="number"
-              value={customAmount}
-              className="max-w-28 text-white text-lg"
-              min="1"
-              step="1"
-              onChange={(e) => {
-                setCustomAmount(e.target.value)
-                setSelectedAmount(null)
-              }}
-            />
+            {props.showCustomInput && (
+              <>
+                $
+                <Input
+                  type="number"
+                  value={customAmount}
+                  className="max-w-28 text-white text-lg"
+                  min="1"
+                  step="1"
+                  onChange={(e) => {
+                    setCustomAmount(e.target.value)
+                    setSelectedAmount(null)
+                  }}
+                />
+              </>
+            )}
             <Button
               className="bg-[#4B0082] hover:bg-[#4B0082]/90 flex-grow"
               data-tina-field={tinaField(props, "donationButton")}

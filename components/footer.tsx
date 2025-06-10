@@ -1,18 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { PageAndNavQuery } from "@/tina/__generated__/types"
-import {
-  Brain,
-  Building2,
-  Car,
-  Coins,
-  Facebook,
-  Heart,
-  Instagram,
-  Users,
-  X,
-} from "lucide-react"
-import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6"
+import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6"
 import { tinaField } from "tinacms/dist/react"
 
 import { buttonVariants } from "@/components/ui/button"
@@ -68,6 +57,8 @@ function SocialIcon({ platform, size = 24 }: SocialIconProps) {
       return <FaFacebook {...iconProps} />
     case "instagram":
       return <FaInstagram {...iconProps} />
+    case "youtube":
+      return <FaYoutube {...iconProps} />
     default:
       return <FaFacebook {...iconProps} />
   }

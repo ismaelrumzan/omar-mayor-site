@@ -150,6 +150,11 @@ export const PageCollection: Collection = {
               type: "string",
             },
             {
+              name: "subtitle",
+              label: "Donation Section Subtitle",
+              type: "string",
+            },
+            {
               name: "id",
               label: "Donation Section Anchor",
               type: "string",
@@ -179,8 +184,18 @@ export const PageCollection: Collection = {
               type: "string",
             },
             {
+              name: "instructions",
+              label: "Donation Button Instructions",
+              type: "string",
+            },
+            {
               name: "showTopImage",
               label: "Show Top Image",
+              type: "boolean",
+            },
+            {
+              name: "showCustomInput",
+              label: "Show Custom value Input",
               type: "boolean",
             },
           ],
