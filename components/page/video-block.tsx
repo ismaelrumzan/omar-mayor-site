@@ -1,6 +1,8 @@
+import Link from "next/link"
 import { PageBlocksVideoBlock } from "@/tina/__generated__/types"
 import { tinaField } from "tinacms/dist/react"
 
+import { Button } from "../ui/button"
 import { VideoPlayer } from "../ui/iframe-video"
 
 export function VideoBlock(props: PageBlocksVideoBlock) {
@@ -23,7 +25,6 @@ export function VideoBlock(props: PageBlocksVideoBlock) {
   if (props.backgroundColor === "primary") {
     textColor = "text-white"
   }
-  console.log(props)
   return (
     <section className={`w-full ${bgStyle} ${textAlign}`}>
       <div className="container py-4 px-4">
@@ -44,6 +45,11 @@ export function VideoBlock(props: PageBlocksVideoBlock) {
           url={`https://www.youtube.com/embed/${props.videoid}`}
           autoplay={props.autoplay ? props.autoplay : false}
         />
+        {props.cta && (
+          <Link href={props.cta.link || ""}>
+            <Button variant="secondary">{props.cta.label}</Button>
+          </Link>
+        )}
       </div>
     </section>
   )

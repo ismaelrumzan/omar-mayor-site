@@ -94,6 +94,15 @@ export const PageCollection: Collection = {
               type: "boolean",
             },
             {
+              name: "cta",
+              label: "Call to action button",
+              type: "object",
+              fields: [
+                { name: "label", type: "string" },
+                { name: "link", type: "string" },
+              ],
+            },
+            {
               type: "string",
               name: "backgroundColor",
               label: "Background color type",
