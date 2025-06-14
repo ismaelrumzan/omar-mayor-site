@@ -64,6 +64,7 @@ module.exports = {
         fontFamily: {
           noto_naskh: ["var(--font-noto-naskh)"],
           noto_sans: ["var(--font-noto-sans)"],
+          noto_serif: ["var(--font-noto-serif)", "serif"],
         },
       },
       keyframes: {

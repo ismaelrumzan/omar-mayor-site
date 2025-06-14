@@ -74,6 +74,49 @@ export const PageCollection: Collection = {
           ],
         },
         {
+          name: "videoBlock",
+          label: "Video Content",
+          fields: [
+            { name: "videoid", label: "Video ID", type: "string" },
+            {
+              name: "title",
+              label: "Video title",
+              type: "string",
+            },
+            {
+              name: "subtitle",
+              label: "Video sub title",
+              type: "string",
+            },
+            {
+              name: "autoplay",
+              label: "Autoplay video or not",
+              type: "boolean",
+            },
+            {
+              name: "cta",
+              label: "Call to action button",
+              type: "object",
+              fields: [
+                { name: "label", type: "string" },
+                { name: "link", type: "string" },
+              ],
+            },
+            {
+              type: "string",
+              name: "backgroundColor",
+              label: "Background color type",
+              options: backgroundColorOptions,
+            },
+            {
+              type: "string",
+              name: "textAlign",
+              label: "Text Alignment",
+              options: ["left", "center", "right"],
+            },
+          ],
+        },
+        {
           name: "welcomeHero",
           label: "Hero Section",
           fields: [
