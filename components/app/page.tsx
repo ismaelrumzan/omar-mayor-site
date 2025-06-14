@@ -11,6 +11,7 @@ import { WelcomeHero } from "@/components/page/welcome-hero"
 import { SiteHeader } from "@/components/site-header"
 
 import { DonationBlock } from "../page/donation-block"
+import { VideoBlock } from "../page/video-block"
 
 export function PageComponent(props: {
   data: PageAndNavQuery
@@ -41,6 +42,9 @@ export function PageComponent(props: {
               }
               case "PageBlocksDonationSection": {
                 return <DonationBlock key={i} {...block} />
+              }
+              case "PageBlocksVideoBlock": {
+                return <VideoBlock key={i} {...block} />
               }
             }
           })}
