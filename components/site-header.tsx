@@ -4,18 +4,18 @@ import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { PageAndNavQuery } from "@/tina/__generated__/types"
-import { Menu } from "lucide-react"
+import { HeartHandshake, Mail, Tv } from "lucide-react"
 import { tinaField } from "tinacms/dist/react"
 
 import { Button } from "@/components/ui/button"
 import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import { MobileMenu } from "@/components/mobile-menu"
-import { ThemeToggle } from "@/components/theme-toggle"
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+
+import { ContactItem, ContactTypes } from "./contact-item"
+import { MobileMenu } from "./mobile-menu"
 
 type ButtonVariants =
   | "link"
@@ -90,6 +90,29 @@ export function SiteHeader({
                   </Link>
                 )
               })}
+              {header.contactSection && header.contactSection.length > 0 && (
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className={`rounded-t-none round-b-lg bg-[#00A86B] hover:bg-[#00A86B]/90" text-white font-bold`}
+                    >
+                      Contact
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="mr-4">
+                    <div className="grid gap-4">
+                      {header.contactSection.map((item) => (
+                        <ContactItem
+                          type={item?.type as ContactTypes}
+                          text={item?.label as string}
+                          email={item?.email as string}
+                        />
+                      ))}
+                    </div>
+                  </PopoverContent>
+                </Popover>
+              )}
             </div>
             <nav className="flex justify-end items-center py-2 grow">
               <div className="space-x-6 text-lg font-bold">
@@ -115,7 +138,11 @@ export function SiteHeader({
               </div>
             </nav>
           </div>
-          <MobileMenu topNav={topNav} generalNav={generalNav} />
+          <MobileMenu
+            topNav={topNav}
+            generalNav={generalNav}
+            contact={header.contactSection}
+          />
         </div>
       </div>
     </header>

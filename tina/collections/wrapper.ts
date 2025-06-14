@@ -91,6 +91,21 @@ export const HeaderCollection: Collection = {
       type: "string",
       description: "used for SEO description",
     },
+    {
+      name: "contactSection",
+      label: "Contact Pop Over Menu",
+      type: "object",
+      list: true,
+      fields: [
+        {
+          name: "type",
+          type: "string",
+          options: ["media", "volunteer", "general"],
+        },
+        { name: "email", type: "string" },
+        { name: "label", type: "string" },
+      ],
+    },
   ],
 }
 export const FooterCollection: Collection = {
