@@ -1,4 +1,21 @@
 {
   "siteTitle": "Vote Omar for Mayor",
-  "siteDescription": "It's time to shine! Let's shine brighter together"
+  "siteDescription": "It's time to shine! Let's shine brighter together",
+  "contactSection": [
+    {
+      "type": "media",
+      "email": "media@omar4mayor.ca",
+      "label": "Media Inquiries"
+    },
+    {
+      "type": "volunteer",
+      "email": "volunteer@omar4mayor.ca",
+      "label": "Volunteer"
+    },
+    {
+      "type": "general",
+      "email": "info@omar4mayor.ca",
+      "label": "General Inquiries"
+    }
+  ]
 }

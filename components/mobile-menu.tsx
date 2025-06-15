@@ -2,17 +2,21 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { PageAndNavQuery } from "@/tina/__generated__/types"
+import { HeaderQuery, PageAndNavQuery } from "@/tina/__generated__/types"
 import { Menu } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
+import { ContactItem, ContactTypes } from "./contact-item"
+
 export function MobileMenu({
   topNav,
   generalNav,
+  contact,
 }: {
   topNav: PageAndNavQuery["nav"]["links"]
   generalNav: PageAndNavQuery["nav"]["links"]
+  contact?: HeaderQuery["header"]["contactSection"]
 }) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -59,15 +63,31 @@ export function MobileMenu({
                 navLink = item?.link as string
               }
               return (
-                <Link
-                  href={navLink}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item?.label}
+                <Link href={navLink}>
+                  <Button
+                    variant="outline"
+                    className="w-full block text-left"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item?.label}
+                  </Button>
                 </Link>
               )
             })}
+            {contact && contact.length > 0 && (
+              <div className="mt-2">
+                Contact
+                <>
+                  {contact.map((item) => (
+                    <ContactItem
+                      type={item?.type as ContactTypes}
+                      text={item?.label as string}
+                      email={item?.email as string}
+                    />
+                  ))}
+                </>
+              </div>
+            )}
           </>
         </div>
       )}
