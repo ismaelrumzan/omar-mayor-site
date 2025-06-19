@@ -1,8 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { GoogleMap } from "@/components/ui/iframe-googlemap"
 import { VideoPlayer } from "@/components/ui/iframe-video"
+
+import { Button } from "../ui/button"
 
 export const components = {
   Youtube: (props) => {
@@ -21,6 +24,15 @@ export const components = {
   },
   Image: (props) => {
     return <img src={props.src} alt={props.alt} className="object-contain" />
+  },
+  Button: (props) => {
+    return (
+      <Link href={props.link}>
+        <Button variant={props.type === "primary" ? "default" : "secondary"}>
+          {props.title}
+        </Button>
+      </Link>
+    )
   },
   a: (props) => {
     if (
