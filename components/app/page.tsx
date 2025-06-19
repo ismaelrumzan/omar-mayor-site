@@ -11,6 +11,7 @@ import { WelcomeHero } from "@/components/page/welcome-hero"
 import { SiteHeader } from "@/components/site-header"
 
 import { DonationBlock } from "../page/donation-block"
+import { EmbedForm } from "../page/embed-form"
 import { VideoBlock } from "../page/video-block"
 
 export function PageComponent(props: {
@@ -45,6 +46,9 @@ export function PageComponent(props: {
               }
               case "PageBlocksVideoBlock": {
                 return <VideoBlock key={i} {...block} />
+              }
+              case "PageBlocksEmbedForm": {
+                return <EmbedForm key={i} {...block} />
               }
             }
           })}

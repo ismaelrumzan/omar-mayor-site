@@ -174,6 +174,27 @@ export const PageCollection: Collection = {
           ],
         },
         {
+          name: "embedForm",
+          label: "Embed External Forms",
+          fields: [
+            {
+              name: "form_title",
+              type: "string",
+            },
+            {
+              name: "form_type",
+              type: "string",
+              label: "Form type",
+              options: ["Qomon"],
+            },
+            {
+              name: "form_id",
+              type: "string",
+              label: "Form ID for the form",
+            },
+          ],
+        },
+        {
           name: "cardgrid3Col",
           label: "Card Grid with 3 Columns",
           ui: {
