@@ -15,16 +15,16 @@ export function SupportOmar() {
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       {/* Hero Section */}
       <section className="relative bg-green-100 py-8 lg:py-12 pb-8">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900">
+            <div className="space-y-2 sm:space-y-6">
+              <h1 className="text-2xl sm:text-4xl lg:text-6xl font-bold leading-tight text-gray-900">
                 This campaign is about all of us.
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-800 leading-relaxed">
+              <p className="sm:text-xl leading-relaxed">
                 Omar believes Edmonton&apos;s best days are still ahead, but
                 that will only happen if we change course. He&apos;s bringing
                 together Edmontonians who&apos;ve had enough of the status quo
@@ -32,7 +32,7 @@ export function SupportOmar() {
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden p-4">
+              <div className="aspect-square rounded-2xl overflow-hidden px-0 py-2 sm:p-4">
                 <Image
                   src="/images/omar-support.jpeg"
                   alt="Omar - Candidate Portrait"
@@ -65,10 +65,10 @@ export function SupportOmar() {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl lg:text-4xl font-bold  mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold  mb-6">
               {"It's time to fix what's broken."}
             </h2>
-            <p className="text-xl  mb-12 leading-relaxed">
+            <p className="text-lg sm:text-xl mb-4 sm:mb-12 leading-relaxed">
               Join our movement for positive change. Every action counts, and
               together we can build the future all Edmontonians deserve
             </p>

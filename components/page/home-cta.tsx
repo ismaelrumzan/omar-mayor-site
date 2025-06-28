@@ -8,15 +8,19 @@ import { VideoPlayer } from "../ui/iframe-video"
 
 export function HomeCTA() {
   return (
-    <section className="bg-gradient-to-br from-green-400 via-green-500 to-green-600 px-6 py-10 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-green-400 via-green-500 to-green-600 p-2 sm:px-6 sm:y-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* YouTube Video Embed */}
-        <div className="mb-8">
+        <div className="mb-4 sm:mb-8">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-6 border border-white border-opacity-20">
-              <div className="text-center mb-6 text-[#4b0082]">
-                <h3 className="text-4xl font-bold mb-2">Meet Dr. Omar</h3>
-                <p className="text-xl">And why you should vote for him</p>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl sm:rounded-3xl p-2 sm:p-6 border border-white border-opacity-20">
+              <div className="text-center sm:mb-6 text-[#4b0082]">
+                <h3 className="text-2xl sm:text-4xl font-bold sm:mb-2">
+                  Meet Dr. Omar
+                </h3>
+                <p className="text-lg sm:text-xl">
+                  And why you should vote for him
+                </p>
               </div>
               <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
                 <VideoPlayer
@@ -29,7 +33,7 @@ export function HomeCTA() {
         </div>
 
         {/* Primary Support CTA */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-2 sm:mb-8">
           <div>
             <Link href="/support-omar">
               <Button

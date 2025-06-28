@@ -9,21 +9,21 @@ import { Button } from "../ui/button"
 export function Letter(props: PageBlocksLetterSection) {
   const [isExpanded, setIsExpanded] = useState(false)
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="p-2 sm:py-20 sm:px-6 bg-white">
       <div className="max-w-4xl mx-auto">
-        <Card className="p-12 shadow-lg border-0 bg-gradient-to-br from-gray-50 to-white">
-          <div className="prose prose-lg max-w-none">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <Card className="p-4 sm:p-12 shadow-lg border-0 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-none">
+            <div className="text-center mb-4 sm:mb-12">
+              <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
                 {props.title}
               </h2>
             </div>
             <div className="space-y-8 text-gray-700 leading-relaxed">
-              <div className="text-lg font-medium mb-6">
+              <div className="text-lg font-medium mb-2 sm:mb-6">
                 Dear Fellow Edmontonians,
               </div>
 
-              <div className="space-y-6 text-lg leading-8">
+              <div className="space-y-2 sm:space-y-6 sm:text-lg sm:leading-8">
                 {/* Always visible preview */}
                 <p>
                   My name is Dr. Omar Mohammad, and I am not a career
@@ -51,7 +51,7 @@ export function Letter(props: PageBlocksLetterSection) {
                     isExpanded ? "max-h-none opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="space-y-6 text-lg leading-8">
+                  <div className="space-y-2 sm:space-y-6 sm:text-lg sm:leading-8">
                     <p>
                       I&apos;m a proud Canadian of diverse heritage: Pakistani,
                       Bengali, Scottish, Irish, and French Maritimer. My wife,
@@ -142,7 +142,7 @@ export function Letter(props: PageBlocksLetterSection) {
                       smart, inclusive growth.
                     </p>
 
-                    <p className="text-xl font-semibold text-white">
+                    <p>
                       Together, we can champion a brighter, stronger future for
                       Edmonton.
                     </p>
