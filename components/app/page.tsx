@@ -27,6 +27,7 @@ export function PageComponent(props: {
   customElements?: "homeCTA" | "support"
 }) {
   const { data } = useTina(props)
+  console.log(props)
   return (
     <>
       <SiteHeader nav={data.nav} header={data.header} />
