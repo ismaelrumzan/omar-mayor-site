@@ -12,7 +12,7 @@ export default async function Page({
   const result = await client.queries.pageAndNav({
     relativePath: `${(await params).filename}.mdx`,
   })
-  return <PageComponent {...result} showBlocks />
+  return <PageComponent {...result} />
 }
 
 export async function generateMetadata(): Promise<Metadata> {

@@ -1,5 +1,6 @@
 "use client"
 
+import { usePathname } from "next/navigation"
 import { PageAndNavQuery } from "@/tina/__generated__/types"
 import { useTina } from "tinacms/dist/react"
 
@@ -23,19 +24,16 @@ export function PageComponent(props: {
     relativePath: string
   }
   query: string
-  showBlocks?: boolean
-  showhomeCTA?: boolean
-  showSupport?: boolean
 }) {
   const { data } = useTina(props)
-  console.log(props)
+  const pathname = usePathname()
   return (
     <>
       <SiteHeader nav={data.nav} header={data.header} />
       <div className="flex min-h-[calc(100vh-120px)] flex-col">
         <div className="grow">
-          {props.showhomeCTA && <HomeCTA />}
-          {props.showSupport && <SupportOmar />}
+          {pathname === "/" && <HomeCTA />}
+          {pathname === "/support-omar" && <SupportOmar />}
           {data.page.blocks?.map((block, i) => {
             switch (block?.__typename) {
               case "PageBlocksWelcomeHero": {
