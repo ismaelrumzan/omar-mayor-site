@@ -17,31 +17,22 @@ export function Letter(props: PageBlocksLetterSection) {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 {props.title}
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-green-600 mx-auto rounded-full"></div>
             </div>
             <div className="space-y-8 text-gray-700 leading-relaxed">
-              <div className="text-lg font-medium text-purple-600 mb-6">
+              <div className="text-lg font-medium mb-6">
                 Dear Fellow Edmontonians,
               </div>
 
               <div className="space-y-6 text-lg leading-8">
                 {/* Always visible preview */}
                 <p>
-                  My name is{" "}
-                  <strong className="text-gray-900">Dr. Omar Mohammad</strong>,
-                  and I am not a career politician. I am a{" "}
-                  <strong className="text-purple-600">
-                    Pediatric Dental Surgeon
-                  </strong>
-                  , a proud father of four, and someone who has called Edmonton
-                  home since the day I was born at the Misericordia Hospital in
-                  1978. I&apos;ve grown up in this city, lived its history, and
-                  shared in both its triumphs and challenges. Edmonton
-                  isn&apos;t just where I live;{" "}
-                  <em className="text-green-600">
-                    it&apos;s where my soul belongs
-                  </em>
-                  .
+                  My name is Dr. Omar Mohammad, and I am not a career
+                  politician. I am a Pediatric Dental Surgeon , a proud father
+                  of four, and someone who has called Edmonton home since the
+                  day I was born at the Misericordia Hospital in 1978. I&apos;ve
+                  grown up in this city, lived its history, and shared in both
+                  its triumphs and challenges. Edmonton isn&apos;t just where I
+                  live; <em>it&apos;s where my soul belongs</em>.
                 </p>
 
                 <p>
@@ -49,9 +40,7 @@ export function Letter(props: PageBlocksLetterSection) {
                   carrier, mechanic, filmmaker, educator, business owner, and
                   now a specialist serving Edmonton&apos;s youngest citizens.
                   Each of these roles taught me that{" "}
-                  <em className="text-green-600">
-                    Edmontonians are strong, resilient, and compassionate
-                  </em>
+                  <em>Edmontonians are strong, resilient, and compassionate</em>
                   . This city is full of talent, heart, and ambition. That
                   spirit is what I believe in and what I want to protect.
                 </p>
@@ -70,11 +59,8 @@ export function Letter(props: PageBlocksLetterSection) {
                       a similar story. Our roots span continents, but our hearts
                       are firmly planted in Edmonton. Our family, like so many
                       here, thrives in this incredible city built on{" "}
-                      <strong className="text-purple-600">
-                        cultural diversity
-                      </strong>{" "}
-                      and{" "}
-                      <strong className="text-green-600">shared values</strong>.
+                      <strong>cultural diversity</strong> and{" "}
+                      <strong>shared values</strong>.
                     </p>
 
                     <p>
@@ -90,10 +76,8 @@ export function Letter(props: PageBlocksLetterSection) {
 
                     <p>
                       Today, I am{" "}
-                      <strong className="text-purple-600">
-                        selling my established dental practice
-                      </strong>{" "}
-                      to fully dedicate myself to running for{" "}
+                      <strong>selling my established dental practice</strong> to
+                      fully dedicate myself to running for{" "}
                       <strong className="text-gray-900">
                         Mayor of Edmonton
                       </strong>
@@ -103,11 +87,9 @@ export function Letter(props: PageBlocksLetterSection) {
                       accountability.
                     </p>
 
-                    <div className="my-8 p-6 bg-gradient-to-r from-purple-50 to-green-50 rounded-lg border-l-4 border-purple-600">
-                      <p className="text-xl font-semibold text-gray-900 mb-4">
-                        Right now, Edmonton is at a crossroads.
-                      </p>
-                    </div>
+                    <p className="text-xl font-semibold text-gray-900 mb-4">
+                      Right now, Edmonton is at a crossroads.
+                    </p>
 
                     <p>
                       Encampments under bridges, rising homelessness, and
@@ -116,10 +98,8 @@ export function Letter(props: PageBlocksLetterSection) {
                       times stretch on, and our classrooms are overcrowded.
                       Seniors are being taxed out of their homes. These
                       aren&apos;t just policy problems; they are{" "}
-                      <strong className="text-purple-600">
-                        human problems
-                      </strong>
-                      . And they require action, not endless debate.
+                      <strong>human problems</strong>. And they require action,
+                      not endless debate.
                     </p>
 
                     <p>
@@ -131,11 +111,9 @@ export function Letter(props: PageBlocksLetterSection) {
                       should be solutions.
                     </p>
 
-                    <div className="my-8 p-6 bg-gradient-to-r from-green-50 to-purple-50 rounded-lg border-l-4 border-green-600">
-                      <p className="text-xl font-semibold text-gray-900">
-                        We know better. Now is the time to do better.
-                      </p>
-                    </div>
+                    <p className="text-xl font-semibold text-gray-900">
+                      We know better. Now is the time to do better.
+                    </p>
 
                     <p>
                       Together, we can build a city that is{" "}
@@ -148,12 +126,7 @@ export function Letter(props: PageBlocksLetterSection) {
                       dollars are being put to real use.
                     </p>
 
-                    <div className="my-10">
-                      <h3 className="text-2xl font-bold text-purple-600 mb-4">
-                        Why I&apos;m Running
-                      </h3>
-                      <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-green-600 rounded-full mb-6"></div>
-                    </div>
+                    <h3>Why I&apos;m Running</h3>
 
                     <p>
                       Throughout my career, I&apos;ve met thousands of families.
@@ -165,30 +138,23 @@ export function Letter(props: PageBlocksLetterSection) {
 
                     <p>
                       It&apos;s time for leadership that puts{" "}
-                      <strong className="text-purple-600">
-                        Edmonton first
-                      </strong>
-                      . Leadership grounded in common sense, focused on reducing
-                      barriers, managing finances responsibly, and prioritizing
-                      the needs of people.
+                      <strong>Edmonton first</strong>. Leadership grounded in
+                      common sense, focused on reducing barriers, managing
+                      finances responsibly, and prioritizing the needs of
+                      people.
                     </p>
 
                     <p>
-                      We are the{" "}
-                      <strong className="text-green-600">
-                        City of Champions
-                      </strong>
-                      . Let&apos;s build a city where every person has the
-                      opportunity to succeed, where no one is left behind, and
-                      where our shared values drive smart, inclusive growth.
+                      We are the <strong>City of Champions</strong>. Let&apos;s
+                      build a city where every person has the opportunity to
+                      succeed, where no one is left behind, and where our shared
+                      values drive smart, inclusive growth.
                     </p>
 
-                    <div className="my-8 p-6 bg-gradient-to-r from-purple-600 to-green-600 rounded-lg text-center">
-                      <p className="text-xl font-semibold text-white">
-                        Together, we can champion a brighter, stronger future
-                        for Edmonton.
-                      </p>
-                    </div>
+                    <p className="text-xl font-semibold text-white">
+                      Together, we can champion a brighter, stronger future for
+                      Edmonton.
+                    </p>
                   </div>
                 </div>
 
@@ -197,7 +163,7 @@ export function Letter(props: PageBlocksLetterSection) {
                   <Button
                     onClick={() => setIsExpanded(!isExpanded)}
                     variant="outline"
-                    className="border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-3 text-lg font-semibold bg-transparent"
+                    className="border-[#4B0082] text-[#4B0082] hover:bg-purple-50 px-8 py-3 text-lg font-semibold bg-transparent"
                   >
                     {isExpanded ? (
                       <>
@@ -240,9 +206,6 @@ export function Letter(props: PageBlocksLetterSection) {
                 {/* Signature - Always visible */}
                 <div className="mt-12 pt-8 border-t border-gray-200">
                   <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-green-600 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">OM</span>
-                    </div>
                     <div>
                       <div className="font-bold text-gray-900 text-lg">
                         Sincerely,
@@ -250,7 +213,7 @@ export function Letter(props: PageBlocksLetterSection) {
                       <div className="font-bold text-gray-900 text-xl">
                         Dr. Omar Mohammad
                       </div>
-                      <div className="text-purple-600 font-semibold">
+                      <div className="text-[#4B0082] font-semibold">
                         Candidate for Mayor of Edmonton
                       </div>
                     </div>

@@ -21,7 +21,7 @@ export function SupportOmar() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight font-serif text-gray-900">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900">
                 This campaign is about all of us.
               </h1>
               <p className="text-xl lg:text-2xl text-gray-800 leading-relaxed">
@@ -34,7 +34,7 @@ export function SupportOmar() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden p-4">
                 <Image
-                  src="/images/omar-portrait.jpg"
+                  src="/images/omar-support.jpeg"
                   alt="Omar - Candidate Portrait"
                   width={400}
                   height={400}
@@ -59,13 +59,16 @@ export function SupportOmar() {
       </section>
 
       {/* Make a Difference Section */}
-      <section id="make-difference" className="py-16 bg-blue-50 relative -mt-8">
+      <section
+        id="make-difference"
+        className="py-16 bg-[#4B0082] relative -mt-8"
+      >
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-3xl lg:text-4xl font-bold  mb-6">
               {"It's time to fix what's broken."}
             </h2>
-            <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+            <p className="text-xl  mb-12 leading-relaxed">
               Join our movement for positive change. Every action counts, and
               together we can build the future all Edmontonians deserve
             </p>
@@ -74,7 +77,7 @@ export function SupportOmar() {
               {/* Join the Movement */}
               <Card className="bg-white hover:bg-gray-50 transition-all duration-300 shadow-lg border-0">
                 <CardContent className="p-8 text-center">
-                  <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Heart className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -86,7 +89,7 @@ export function SupportOmar() {
                     doing to bring change to Edmonton.
                   </p>
                   <Button
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
+                    className="w-full bg-primary hover:opacity-70 text-white font-semibold py-3"
                     onClick={() => setIsSignupModalOpen(true)}
                   >
                     Get Updates
@@ -97,7 +100,7 @@ export function SupportOmar() {
               {/* Volunteer */}
               <Card className="bg-white hover:bg-gray-50 transition-all duration-300 shadow-lg border-0">
                 <CardContent className="p-8 text-center">
-                  <div className="bg-purple-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-[#4B0082] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Users className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -109,7 +112,7 @@ export function SupportOmar() {
                     and help drive change.
                   </p>
                   <Button
-                    className="w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3"
+                    className="w-full bg-[#4B0082] hover:opacity-70 text-white font-semibold py-3"
                     onClick={() => setIsVolunteerModalOpen(true)}
                   >
                     Sign Up to Help
@@ -120,7 +123,7 @@ export function SupportOmar() {
               {/* Donate */}
               <Card className="bg-white hover:bg-gray-50 transition-all duration-300 shadow-lg border-0">
                 <CardContent className="p-8 text-center">
-                  <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                     <DollarSign className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -131,7 +134,7 @@ export function SupportOmar() {
                     broken systems, and bring common sense back to City Hall.
                   </p>
                   <Link href="/support">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3">
+                    <Button className="w-full bg-primary hover:opacity-70 text-white font-semibold py-3">
                       Contribute Now
                     </Button>
                   </Link>
