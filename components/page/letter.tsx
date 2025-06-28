@@ -58,9 +58,8 @@ export function Letter(props: PageBlocksLetterSection) {
                       Nadia, a Lebanese farm girl from Northern Manitoba, shares
                       a similar story. Our roots span continents, but our hearts
                       are firmly planted in Edmonton. Our family, like so many
-                      here, thrives in this incredible city built on{" "}
-                      <strong>cultural diversity</strong> and{" "}
-                      <strong>shared values</strong>.
+                      here, thrives in this incredible city built on cultural
+                      diversity and shared values.
                     </p>
 
                     <p>
@@ -75,19 +74,15 @@ export function Letter(props: PageBlocksLetterSection) {
                     </p>
 
                     <p>
-                      Today, I am{" "}
-                      <strong>selling my established dental practice</strong> to
-                      fully dedicate myself to running for{" "}
-                      <strong className="text-gray-900">
-                        Mayor of Edmonton
-                      </strong>
-                      . Why? Because I believe this city needs leadership rooted
+                      Today, I am selling my established dental practice to
+                      fully dedicate myself to running for Mayor of Edmonton .
+                      Why? Because I believe this city needs leadership rooted
                       in service, not politics. Leadership that listens, acts,
                       and delivers results with compassion, efficiency, and
                       accountability.
                     </p>
 
-                    <p className="text-xl font-semibold text-gray-900 mb-4">
+                    <p className="text-xl">
                       Right now, Edmonton is at a crossroads.
                     </p>
 
@@ -97,9 +92,8 @@ export function Letter(props: PageBlocksLetterSection) {
                       enough. Our infrastructure is strained, our hospital wait
                       times stretch on, and our classrooms are overcrowded.
                       Seniors are being taxed out of their homes. These
-                      aren&apos;t just policy problems; they are{" "}
-                      <strong>human problems</strong>. And they require action,
-                      not endless debate.
+                      aren&apos;t just policy problems; they are human problems.
+                      And they require action, not endless debate.
                     </p>
 
                     <p>
@@ -111,22 +105,20 @@ export function Letter(props: PageBlocksLetterSection) {
                       should be solutions.
                     </p>
 
-                    <p className="text-xl font-semibold text-gray-900">
+                    <p className="text-xl">
                       We know better. Now is the time to do better.
                     </p>
 
                     <p>
-                      Together, we can build a city that is{" "}
-                      <strong className="text-green-600">
-                        safe, thriving, and inclusive
-                      </strong>{" "}
-                      while staying fiscally responsible and transparent. We can
-                      build a future where every neighborhood is secure, every
-                      resident is supported, and every taxpayer knows their
-                      dollars are being put to real use.
+                      Together, we can build a city that is safe, thriving, and
+                      inclusive while staying fiscally responsible and
+                      transparent. We can build a future where every
+                      neighborhood is secure, every resident is supported, and
+                      every taxpayer knows their dollars are being put to real
+                      use.
                     </p>
 
-                    <h3>Why I&apos;m Running</h3>
+                    <p className="text-xl">Why I&apos;m Running</p>
 
                     <p>
                       Throughout my career, I&apos;ve met thousands of families.
@@ -137,18 +129,17 @@ export function Letter(props: PageBlocksLetterSection) {
                     </p>
 
                     <p>
-                      It&apos;s time for leadership that puts{" "}
-                      <strong>Edmonton first</strong>. Leadership grounded in
-                      common sense, focused on reducing barriers, managing
-                      finances responsibly, and prioritizing the needs of
-                      people.
+                      It&apos;s time for leadership that puts Edmonton first.
+                      Leadership grounded in common sense, focused on reducing
+                      barriers, managing finances responsibly, and prioritizing
+                      the needs of people.
                     </p>
 
                     <p>
-                      We are the <strong>City of Champions</strong>. Let&apos;s
-                      build a city where every person has the opportunity to
-                      succeed, where no one is left behind, and where our shared
-                      values drive smart, inclusive growth.
+                      We are the City of Champions. Let&apos;s build a city
+                      where every person has the opportunity to succeed, where
+                      no one is left behind, and where our shared values drive
+                      smart, inclusive growth.
                     </p>
 
                     <p className="text-xl font-semibold text-white">
@@ -207,12 +198,8 @@ export function Letter(props: PageBlocksLetterSection) {
                 <div className="mt-12 pt-8 border-t border-gray-200">
                   <div className="flex items-center space-x-4">
                     <div>
-                      <div className="font-bold text-gray-900 text-lg">
-                        Sincerely,
-                      </div>
-                      <div className="font-bold text-gray-900 text-xl">
-                        Dr. Omar Mohammad
-                      </div>
+                      <div className="text-lg">Sincerely,</div>
+                      <div className="text-lg">Dr. Omar Mohammad</div>
                       <div className="text-[#4B0082] font-semibold">
                         Candidate for Mayor of Edmonton
                       </div>
