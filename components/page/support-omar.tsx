@@ -26,7 +26,7 @@ export function SupportOmar() {
               </h1>
               <p className="text-xl lg:text-2xl text-gray-800 leading-relaxed">
                 Omar believes Edmonton&apos;s best days are still ahead, but
-                that will only happen if we change course. He's bringing
+                that will only happen if we change course. He&apos;s bringing
                 together Edmontonians who&apos;ve had enough of the status quo
                 and want real change at City Hall. Let&apos;s get to work.
               </p>

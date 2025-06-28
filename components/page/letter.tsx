@@ -66,13 +66,14 @@ export function Letter(props: PageBlocksLetterSection) {
                 </p>
 
                 <p>
-                  For years, I've given back through my work and volunteerism.
-                  I&apos;ve provided free dental care on 11 international
-                  missions, raised millions through charity auctions, and
-                  contributed to addressing local needs here in Edmonton. These
-                  experiences, both local and global, have taught me what works
-                  and what doesn&apos;t. They&apos;ve also shown me that
-                  Edmonton&apos;s issues, while complex, are not insurmountable.
+                  For years, I&apos;ve given back through my work and
+                  volunteerism. I&apos;ve provided free dental care on 11
+                  international missions, raised millions through charity
+                  auctions, and contributed to addressing local needs here in
+                  Edmonton. These experiences, both local and global, have
+                  taught me what works and what doesn&apos;t. They&apos;ve also
+                  shown me that Edmonton&apos;s issues, while complex, are not
+                  insurmountable.
                 </p>
 
                 <p>
