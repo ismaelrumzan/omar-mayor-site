@@ -26,7 +26,7 @@ export default async function Page() {
   })
   return (
     <Suspense>
-      <PageComponent {...result} customElements="support" showBlocks />
+      <PageComponent {...result} showSupport />
     </Suspense>
   )
 }

@@ -26,7 +26,7 @@ export default async function Page() {
   })
   return (
     <Suspense>
-      <PageComponent {...result} customElements="homeCTA" showBlocks />
+      <PageComponent {...result} showhomeCTA showBlocks />
     </Suspense>
   )
 }

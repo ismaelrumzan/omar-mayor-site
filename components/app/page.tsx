@@ -24,7 +24,8 @@ export function PageComponent(props: {
   }
   query: string
   showBlocks?: boolean
-  customElements?: "homeCTA" | "support"
+  showhomeCTA?: boolean
+  showSupport?: boolean
 }) {
   const { data } = useTina(props)
   console.log(props)
@@ -33,12 +34,8 @@ export function PageComponent(props: {
       <SiteHeader nav={data.nav} header={data.header} />
       <div className="flex min-h-[calc(100vh-120px)] flex-col">
         <div className="grow">
-          {props.customElements && props.customElements === "homeCTA" && (
-            <HomeCTA />
-          )}
-          {props.customElements && props.customElements === "support" && (
-            <SupportOmar />
-          )}
+          {props.showhomeCTA && <HomeCTA />}
+          {props.showSupport && <SupportOmar />}
           {data.page.blocks?.map((block, i) => {
             switch (block?.__typename) {
               case "PageBlocksWelcomeHero": {
