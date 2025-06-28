@@ -205,6 +205,11 @@ export const PageCollection: Collection = {
           fields: cardBlockItem,
         },
         {
+          name: "letterSection",
+          label: "Letter from Omar",
+          fields: [{ name: "title", label: "Letter title", type: "string" }],
+        },
+        {
           name: "donationSection",
           label: "Donation Section",
           fields: [
