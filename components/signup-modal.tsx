@@ -42,7 +42,7 @@ export function SignupModal({ isOpen, onClose }: SignupModalProps) {
               Join the Movement
             </h2>
             <p className="text-gray-600 mt-1">
-              Stay connected with Omar's campaign for change
+              Stay connected with Omar&apos;s campaign for change
             </p>
           </div>
           <Button

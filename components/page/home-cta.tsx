@@ -40,7 +40,7 @@ export function HomeCTA() {
                   Campaign Launch Highlights
                 </h3>
                 <p className="text-green-100">
-                  Watch Omar's official campaign launch - a huge success!
+                  Watch Omar&apos;s official campaign launch - a huge success!
                 </p>
               </div>
               <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">

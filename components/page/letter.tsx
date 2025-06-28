@@ -31,18 +31,20 @@ export function Letter(props: PageBlocksLetterSection) {
                   </strong>
                   , a proud father of four, and someone who has called Edmonton
                   home since the day I was born at the Misericordia Hospital in
-                  1978. I've grown up in this city, lived its history, and
-                  shared in both its triumphs and challenges. Edmonton isn't
-                  just where I live;{" "}
-                  <em className="text-green-600">it's where my soul belongs</em>
+                  1978. I&apos;ve grown up in this city, lived its history, and
+                  shared in both its triumphs and challenges. Edmonton
+                  isn&apos;t just where I live;{" "}
+                  <em className="text-green-600">
+                    it&apos;s where my soul belongs
+                  </em>
                   .
                 </p>
 
                 <p>
-                  I've worn many hats throughout my life: newspaper carrier,
-                  mechanic, filmmaker, educator, business owner, and now a
-                  specialist serving Edmonton's youngest citizens. Each of these
-                  roles taught me that{" "}
+                  I&apos;ve worn many hats throughout my life: newspaper
+                  carrier, mechanic, filmmaker, educator, business owner, and
+                  now a specialist serving Edmonton&apos;s youngest citizens.
+                  Each of these roles taught me that{" "}
                   <em className="text-green-600">
                     Edmontonians are strong, resilient, and compassionate
                   </em>
@@ -51,12 +53,12 @@ export function Letter(props: PageBlocksLetterSection) {
                 </p>
 
                 <p>
-                  I'm a proud Canadian of diverse heritage: Pakistani, Bengali,
-                  Scottish, Irish, and French Maritimer. My wife, Nadia, a
-                  Lebanese farm girl from Northern Manitoba, shares a similar
-                  story. Our roots span continents, but our hearts are firmly
-                  planted in Edmonton. Our family, like so many here, thrives in
-                  this incredible city built on{" "}
+                  I&apos;m a proud Canadian of diverse heritage: Pakistani,
+                  Bengali, Scottish, Irish, and French Maritimer. My wife,
+                  Nadia, a Lebanese farm girl from Northern Manitoba, shares a
+                  similar story. Our roots span continents, but our hearts are
+                  firmly planted in Edmonton. Our family, like so many here,
+                  thrives in this incredible city built on{" "}
                   <strong className="text-purple-600">
                     cultural diversity
                   </strong>{" "}
@@ -65,12 +67,12 @@ export function Letter(props: PageBlocksLetterSection) {
 
                 <p>
                   For years, I've given back through my work and volunteerism.
-                  I've provided free dental care on 11 international missions,
-                  raised millions through charity auctions, and contributed to
-                  addressing local needs here in Edmonton. These experiences,
-                  both local and global, have taught me what works and what
-                  doesn't. They've also shown me that Edmonton's issues, while
-                  complex, are not insurmountable.
+                  I&apos;ve provided free dental care on 11 international
+                  missions, raised millions through charity auctions, and
+                  contributed to addressing local needs here in Edmonton. These
+                  experiences, both local and global, have taught me what works
+                  and what doesn&apos;t. They&apos;ve also shown me that
+                  Edmonton&apos;s issues, while complex, are not insurmountable.
                 </p>
 
                 <p>
@@ -94,11 +96,11 @@ export function Letter(props: PageBlocksLetterSection) {
 
                 <p>
                   Encampments under bridges, rising homelessness, and growing
-                  crime are clear signs that we're not doing enough. Our
+                  crime are clear signs that we&apos;re not doing enough. Our
                   infrastructure is strained, our hospital wait times stretch
                   on, and our classrooms are overcrowded. Seniors are being
-                  taxed out of their homes. These aren't just policy problems;
-                  they are{" "}
+                  taxed out of their homes. These aren&apos;t just policy
+                  problems; they are{" "}
                   <strong className="text-purple-600">human problems</strong>.
                   And they require action, not endless debate.
                 </p>
@@ -130,21 +132,21 @@ export function Letter(props: PageBlocksLetterSection) {
 
                 <div className="my-10">
                   <h3 className="text-2xl font-bold text-purple-600 mb-4">
-                    Why I'm Running
+                    Why I&apos;m Running
                   </h3>
                   <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-green-600 rounded-full mb-6"></div>
                 </div>
 
                 <p>
-                  Throughout my career, I've met thousands of families. I've
-                  listened to your stories, your frustrations, and your hopes.
-                  I've walked the river valley trails and clinic halls right
-                  beside you. I understand what matters to Edmontonians because
-                  I've lived it.
+                  Throughout my career, I&apos;ve met thousands of families.
+                  I&apos;ve listened to your stories, your frustrations, and
+                  your hopes. I&apos;ve walked the river valley trails and
+                  clinic halls right beside you. I understand what matters to
+                  Edmontonians because I&apos;ve lived it.
                 </p>
 
                 <p>
-                  It's time for leadership that puts{" "}
+                  It&apos;s time for leadership that puts{" "}
                   <strong className="text-purple-600">Edmonton first</strong>.
                   Leadership grounded in common sense, focused on reducing
                   barriers, managing finances responsibly, and prioritizing the
@@ -154,8 +156,8 @@ export function Letter(props: PageBlocksLetterSection) {
                 <p>
                   We are the{" "}
                   <strong className="text-green-600">City of Champions</strong>.
-                  Let's build a city where every person has the opportunity to
-                  succeed, where no one is left behind, and where our shared
+                  Let&apos;s build a city where every person has the opportunity
+                  to succeed, where no one is left behind, and where our shared
                   values drive smart, inclusive growth.
                 </p>
 

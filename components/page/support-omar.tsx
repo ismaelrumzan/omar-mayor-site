@@ -81,9 +81,9 @@ export function SupportOmar() {
                     {"Stand With Dr. Omar"}
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Sign up to show your support, stay in the loop on Omar's
-                    campaign, and get updates on what he's doing to bring change
-                    to Edmonton.
+                    Sign up to show your support, stay in the loop on
+                    Omar&apos;s campaign, and get updates on what he&apos;s
+                    doing to bring change to Edmonton.
                   </p>
                   <Button
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3"
