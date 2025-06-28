@@ -1,8 +1,7 @@
 ---
 links:
   - label: Become a supporter
-    link: ''
-    linkedPage: content/pages/become-a-supporter.mdx
+    linkedPage: content/pages/support-omar.mdx
     linkStyle: button-primary
     location: top-bar
   - label: About Omar

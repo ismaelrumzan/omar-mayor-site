@@ -12,6 +12,9 @@ import { SiteHeader } from "@/components/site-header"
 
 import { DonationBlock } from "../page/donation-block"
 import { EmbedForm } from "../page/embed-form"
+import { HomeCTA } from "../page/home-cta"
+import { Letter } from "../page/letter"
+import { SupportOmar } from "../page/support-omar"
 import { VideoBlock } from "../page/video-block"
 
 export function PageComponent(props: {
@@ -20,6 +23,8 @@ export function PageComponent(props: {
     relativePath: string
   }
   query: string
+  showBlocks?: boolean
+  customElements?: "homeCTA" | "support"
 }) {
   const { data } = useTina(props)
   return (
@@ -27,10 +32,19 @@ export function PageComponent(props: {
       <SiteHeader nav={data.nav} header={data.header} />
       <div className="flex min-h-[calc(100vh-120px)] flex-col">
         <div className="grow">
+          {props.customElements && props.customElements === "homeCTA" && (
+            <HomeCTA />
+          )}
+          {props.customElements && props.customElements === "support" && (
+            <SupportOmar />
+          )}
           {data.page.blocks?.map((block, i) => {
             switch (block?.__typename) {
               case "PageBlocksWelcomeHero": {
                 return <WelcomeHero key={i} {...block} />
+              }
+              case "PageBlocksLetterSection": {
+                return <Letter key={i} {...block} />
               }
               case "PageBlocksCardgrid3Col": {
                 return <CardGridBlock key={i} {...block} />
