@@ -104,8 +104,8 @@ export function Footer({ footer }: { footer: PageAndNavQuery["footer"] }) {
         </div>
       </div>
       <SiteCredit
-        text="Built by Cordoba Digital Media"
-        link="https://cordobadigitalmedia.com"
+        text="Privacy Policy"
+        link="/privacy"
         showLogo={false}
         footerbg={"secondary"}
       />
