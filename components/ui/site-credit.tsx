@@ -17,7 +17,6 @@ export function SiteCredit({
   return (
     <Link
       href={link}
-      target="_blank"
       className={`flex items-center justify-center text-xs transition-opacity hover:opacity-100`}
     >
       <span
