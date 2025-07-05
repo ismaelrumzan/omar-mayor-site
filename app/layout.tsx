@@ -32,7 +32,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <head>
+          {/* Qomon optimization - these will help */}
+          <link rel="preconnect" href="https://form.qomon.org" />
+          <link rel="preconnect" href="https://scripts.qomon.org" />
+          <link rel="dns-prefetch" href="https://form.qomon.org" />
+          <link rel="dns-prefetch" href="https://scripts.qomon.org" />
+        </head>
         <body className={noto_sans.variable + " " + noto_serif.variable}>
           <ThemeProvider
             attribute="class"
