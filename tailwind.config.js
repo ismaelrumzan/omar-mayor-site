@@ -1,6 +1,6 @@
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss','tw-animate-css').Config} */
 module.exports = {
   darkMode: ["class"],
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
@@ -22,6 +22,9 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        theme: {
+          purple: "hsl(var(--theme-purple))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
