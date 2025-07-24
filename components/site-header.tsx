@@ -76,10 +76,12 @@ export function SiteHeader({
                 } else {
                   navLink = item?.link as string
                 }
+                // Use a unique key: prefer _sys.filename, fallback to link, then label
+                const key = item?.linkedPage?._sys?.filename || item?.link || item?.label || Math.random()
                 return (
                   <Link
                     href={navLink}
-                    key={item?.label}
+                    key={key}
                     data-tina-field={tinaField(item, "label")}
                   >
                     <Button
@@ -104,6 +106,7 @@ export function SiteHeader({
                     <div className="grid gap-4">
                       {header.contactSection.map((item) => (
                         <ContactItem
+                          key={item?.email || item?.label || Math.random()}
                           type={item?.type as ContactTypes}
                           text={item?.label as string}
                           email={item?.email as string}
@@ -124,9 +127,11 @@ export function SiteHeader({
                   } else {
                     navLink = item?.link as string
                   }
+                  // Use a unique key: prefer _sys.filename, fallback to link, then label
+                  const key = item?.linkedPage?._sys?.filename || item?.link || item?.label || Math.random()
                   return (
                     <Link
-                      key={item?.label}
+                      key={key}
                       data-tina-field={tinaField(item, "label")}
                       href={navLink}
                       className="transition-colors hover:text-foreground/80"
