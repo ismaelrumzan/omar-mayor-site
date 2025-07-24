@@ -66,11 +66,11 @@ export function PlatformContent() {
           {/* Creating inline decorative lines around "The Platform" */}
           <div className="w-4/5 min-w-30 flex items-center justify-center mx-auto">
             <div className="flex-1 h-px bg-black"></div>
-            <p className="mx-4 text-lg text-theme-purple">THE PLATFORM</p>
+            <p className="mx-4 text-sm sm:text-lg text-theme-purple">THE PLATFORM</p>
             <div className="flex-1 h-px bg-black "></div>
           </div>
-          <h1 className="mb-4 font-bold text-4xl text-theme-purple">
-            Edmonton.&apos;s Future First - A comprehensive plan for affordability, fiscal responsibility, and social
+          <h1 className="mb-4 font-bold text-2xl sm:text-4xl text-theme-purple">
+            Edmonton&apos;s Future First - A comprehensive plan for affordability, fiscal responsibility, and social
             progress
           </h1>
         </div>
