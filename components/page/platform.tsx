@@ -70,7 +70,7 @@ export function PlatformContent() {
             <div className="flex-1 h-px bg-black "></div>
           </div>
           <h1 className="mb-4 font-bold text-4xl text-theme-purple">
-            Edmonton's Future First - A comprehensive plan for affordability, fiscal responsibility, and social
+            Edmonton.&apos;s Future First - A comprehensive plan for affordability, fiscal responsibility, and social
             progress
           </h1>
         </div>
