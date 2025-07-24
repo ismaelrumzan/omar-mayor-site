@@ -90,14 +90,14 @@ export function PlatformContent() {
                 <p className="font-medium text-muted-foreground">A history of fiscal mismanagement.</p>
                 <p>
                   It should be simple: City Hall is supposed to spend your tax dollars wisely on services and
-                  infrastructure that benefit us all. Instead, they've put Edmontonians like you and I deeper into
-                  debt by blowing hundreds of millions on failed programs and pet projects—like $80M on useless
+                  infrastructure that benefit us all. Instead, they&#39;ve put Edmontonians like you and I deeper into
+                  debt by blowing hundreds of millions on failed programs and pet projects&#8212;like $80M on useless
                   electric buses, $530M on a mega rec centre in Lewis Farms and another in Coronation with a
-                  velodrome, $250M on the Ice District 'Fan Park', and more.
+                  velodrome, $250M on the Ice District &#39;Fan Park&#39;, and more.
                 </p>
                 <p>
                   By 2026, our debt will top $5 billion! Servicing this debt costs $450M a year, which is more than
-                  any other annual expense except Police and ETS. To help pay for it all, they've hiked property
+                  any other annual expense except Police and ETS. To help pay for it all, they&#39;ve hiked property
                   taxes by over 23% in the last 4 years (*over 40% when considering property value increases), while
                   inflation squeezes families, homelessness doubles, and over 42,000 rely on the Food Bank.
                 </p>
@@ -110,20 +110,20 @@ export function PlatformContent() {
               {/* Accountability - Salary freeze */}
               <CollapsibleItem title='Accountability - Salary freeze for politicians'>
                 <p>
-                  In 2025, Edmonton's mayor will be paid $223,234, and councilors will be paid $126,119, which
+                  In 2025, Edmonton&#39;s mayor will be paid $223,234, and councilors will be paid $126,119, which
                   represents a $16,723, and a $10,108 raise respectively since the beginning of the term. Regular
                   Edmontonians in the meantime were hit with relentless tax hikes, the city is now staring down a
                   $3.3 billion capital funding shortfall, and our city debt will reach $5 Billion dollars next year
                   (2026).
                 </p>
                 <p>
-                  Something here isn't adding up and it's insulting that City Hall gets raises while working
-                  families are struggling to afford rent and groceries. I don't believe in raises without results.
-                  That's why, as Mayor, I will:
+                  Something here isn&#39;t adding up and it&#39;s insulting that City Hall gets raises while working
+                  families are struggling to afford rent and groceries. I don&#39;t believe in raises without results.
+                  That&#39;s why, as Mayor, I will:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    Freeze the salaries of all elected municipal officials (including the Mayor) until a) Edmonton's
+                    Freeze the salaries of all elected municipal officials (including the Mayor) until a) Edmonton&#39;s
                     budgets (operational AND capital) are finally balanced, b) the borrowing stops (no increase in
                     our debt), and c) property taxes are frozen.
                   </li>
@@ -135,15 +135,15 @@ export function PlatformContent() {
                 </ul>
                 <p>
                   City Hall needs to remember: they work for the people, not themselves. No results, no
-                  raise—accountability starts at the top.
+                  raise&#8212;accountability starts at the top.
                 </p>
               </CollapsibleItem>
 
               {/* Re-Election ineligibility */}
               <CollapsibleItem title='Accountability - Re-Election ineligibility'>
                 <p>
-                  In the real world, people that don't do their job, or if they perform poorly, they lose their
-                  jobs. In municipal politics, somehow this isn't the case! Career politicians who have lead the way
+                  In the real world, people that don&#39;t do their job, or if they perform poorly, they lose their
+                  jobs. In municipal politics, somehow this isn&#39;t the case! Career politicians who have lead the way
                   to unprecedented levels of debt and taxes, and repeated deficit capital budgets are up for
                   re-election, and some are asking for a promotion (4 former or current city councillors are running
                   for Mayor)!
@@ -181,9 +181,9 @@ export function PlatformContent() {
                 </p>
                 <p>
                   The City is using debt as a key financing tool for major capital projects to fund projects like
-                  LRT expansion, mega recreation facilities, bike lanes, and a 'Fan Park' in the Ice District. As a
+                  LRT expansion, mega recreation facilities, bike lanes, and a &#39;Fan Park&#39; in the Ice District. As a
                   result of irresponsible spending, Edmonton has among the highest debt per capita compared to other
-                  major Canadian cities. For example, Edmonton's per capita debt is 50% higher than that of Calgary.
+                  major Canadian cities. For example, Edmonton&#39;s per capita debt is 50% higher than that of Calgary.
                 </p>
                 <p>
                   The Operational Budget is currently $3.75 Billion Dollars, and must be balanced by law. The
@@ -197,7 +197,7 @@ export function PlatformContent() {
                   As mayor, I will put an end to increasing the debt by shelving all newly proposed major capital
                   projects, and reviewing and proposing appropriate cost reductions on existing on-going projects.
                   Balancing our budgets (Capital AND Operational), means spending what we have, and not any
-                  more…because Edmontonians can't afford wasteful spending!
+                  more&#8230;because Edmontonians can&#39;t afford wasteful spending!
                 </p>
               </CollapsibleItem>
 
@@ -206,22 +206,22 @@ export function PlatformContent() {
                 <p>
                   Housing in Edmonton is becoming increasingly out of reach for the people who keep our city
                   running. Families, seniors, students, and workers deserve dignity and stability, not just
-                  survival. Affordable housing is defined as a "shelter that costs less than 30% of a household's
-                  gross income." For a household earning under $63,000 a year, that kind of housing is almost
+                  survival. Affordable housing is defined as a &quot;shelter that costs less than 30% of a household&#39;s
+                  gross income.&quot; For a household earning under $63,000 a year, that kind of housing is almost
                   impossible to find.
                 </p>
                 <p>
                   Today, the median home price in Edmonton reached a record high of $465,000 in 2025. Too many are
-                  living in housing they can't afford. By 2026, nearly 60,000 households will have their core
+                  living in housing they can&#39;t afford. By 2026, nearly 60,000 households will have their core
                   housing needs unmet, meaning they will be living in a home that they cannot afford, is
                   overcrowded, in disrepair or otherwise unsafe. Meanwhile, the City has fewer than 17,000 units
                   affordable to its poorest residents. Women-led households, Indigenous and racialized communities,
                   seniors, and people living with disabilities are hit the hardest.
                 </p>
                 <p>
-                  Families shouldn't have to choose between rent and groceries. Seniors who built our city shouldn't
-                  have to fear eviction. And young people who are the future of our city shouldn't be priced out. We
-                  need to take real, long-term action to address Edmonton's housing shortage. That means building
+                  Families shouldn&#39;t have to choose between rent and groceries. Seniors who built our city shouldn&#39;t
+                  have to fear eviction. And young people who are the future of our city shouldn&#39;t be priced out. We
+                  need to take real, long-term action to address Edmonton&#39;s housing shortage. That means building
                   more affordable units, faster. It means turning empty spaces into livable homes. And it means
                   treating housing not as a commodity, but as a basic need and a human right.
                 </p>
@@ -230,19 +230,19 @@ export function PlatformContent() {
               {/* Green Lane Permits */}
               <CollapsibleItem title='Green Lane Permits'>
                 <p className="font-medium italic">
-                  "We need to reward those building for people, not just profit."
+                  &quot;We need to reward those building for people, not just profit.&quot;
                 </p>
                 <p>
                   Edmonton has already made major strides in fast-tracking affordable housing. Through the federal
-                  Housing Accelerator Fund (HAF), the city secured–as of March 22, 2025–$192 million to help permit
-                  over 36,000 homes by 2026, including more than 5,700 new affordable units. We've also introduced
+                  Housing Accelerator Fund (HAF), the city secured&#8211;as of March 22, 2025&#8211;$192 million to help permit
+                  over 36,000 homes by 2026, including more than 5,700 new affordable units. We&#39;ve also introduced
                   prioritized processing for non-profit housing, digital permitting systems, and even same-day
-                  "auto-review" approvals for standardized builds.
+                  &quot;auto-review&quot; approvals for standardized builds.
                 </p>
                 <p>But, I believe we can, and MUST go further. My plan of action to go beyond includes:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    Implementing a deeper and more strategic "Green Lane" permitting system. Projects with higher
+                    Implementing a deeper and more strategic &quot;Green Lane&quot; permitting system. Projects with higher
                     affordability will move faster through the queue. Developers who commit to deeply affordable
                     homes (especially for those below 60% of median income) will be eligible for faster permits,
                     clearer standards, and customized design pathways developed in collaboration with communities.
@@ -259,19 +259,19 @@ export function PlatformContent() {
                 </ul>
                 <p>
                   Not every builder is out to maximize profit and many want to be a part of the solution, and if
-                  you're building for the people, the City should be helping. Let's build homes and not hurdles.
+                  you&#39;re building for the people, the City should be helping. Let&#39;s build homes and not hurdles.
                 </p>
               </CollapsibleItem>
 
               {/* Infills */}
               <CollapsibleItem title='Infills'>
                 <p className="font-medium italic">
-                  "We need more housing, but we also need common sense." - Omar Mohammad
+                  &quot;We need more housing, but we also need common sense.&quot; - Omar Mohammad
                 </p>
                 <p>
-                  Edmonton is growing. With 50 – 65 000 new residents expected each year, and Alberta leading Canada
+                  Edmonton is growing. With 50 &#8211; 65 000 new residents expected each year, and Alberta leading Canada
                   in interprovincial migration, our city must evolve to meet rising housing demand. But the solution
-                  isn't unchecked urban sprawl, it's smart infill in our existing neighbourhoods without damaging
+                  isn&#39;t unchecked urban sprawl, it&#39;s smart infill in our existing neighbourhoods without damaging
                   the integrity of those neighbourhoods.
                 </p>
                 <p>
@@ -284,7 +284,7 @@ export function PlatformContent() {
                 <p>Concerns raised by the communities are:</p>
                 <ul className="list-disc pl-6 space-y-1">
                   <li>Zero parking requirements leading to congestion</li>
-                  <li>Oversized "McMansions" and poorly designed multiplexes</li>
+                  <li>Oversized &quot;McMansions&quot; and poorly designed multiplexes</li>
                   <li>Unsafe or disruptive construction sites</li>
                   <li>Impact on property values and community cohesion</li>
                   <li>Mismatch between policy rhetoric and built reality</li>
@@ -292,7 +292,7 @@ export function PlatformContent() {
                 <p>
                   I will listen to the concerns of Edmontonians while balancing the need for more housing. I support
                   infill, but believe it must be done right and with communities, not against them. If we ignore
-                  traffic, design, and livability, we risk losing the very character and charm that makes Edmonton's
+                  traffic, design, and livability, we risk losing the very character and charm that makes Edmonton&#39;s
                   neighbourhoods worth living in.
                 </p>
                 <p>For a balanced plan is that we must:</p>
@@ -320,8 +320,8 @@ export function PlatformContent() {
             <CardHeader className="bg-theme-purple text-white rounded-none">
               <CardTitle className="text-2xl">SOCIAL ISSUES</CardTitle>
               <p className="text-green-100">
-                "If someone is cold you should give them a blanket. Better yet teach them to make a blanket. But what
-                we need to do in Edmonton is change the temperature so that no one needs a blanket to begin with." -
+                &quot;If someone is cold you should give them a blanket. Better yet teach them to make a blanket. But what
+                we need to do in Edmonton is change the temperature so that no one needs a blanket to begin with.&quot; -
                 Omar Mohammad
               </p>
             </CardHeader>
@@ -338,15 +338,15 @@ export function PlatformContent() {
               {/* Dignity/Housing First Initiative */}
               <CollapsibleItem title='Dignity/Housing First Initiative'>
                 <p className="font-medium italic">
-                  "We cannot just throw people into a warehouse, we need to treat people like people. With dignity
-                  first- along with access to basic needs…. including shelter."
+                  &quot;We cannot just throw people into a warehouse, we need to treat people like people. With dignity
+                  first- along with access to basic needs&#8230;. including shelter.&quot;
                 </p>
                 <p>
-                  Nearly half of Edmonton's homeless population are chronically homeless, which means that emergency
-                  shelters, though important, are only temporary fixes that don't address long-term needs like
+                  Nearly half of Edmonton&#39;s homeless population are chronically homeless, which means that emergency
+                  shelters, though important, are only temporary fixes that don&#39;t address long-term needs like
                   housing stability, trauma, and community reintegration. Too many people experiencing homelessness
                   are caught in revolving doors, moved from encampments to emergency shelters, from hospital beds to
-                  jail cells, and then back onto the streets. Not only is this cycle inhumane, it's expensive,
+                  jail cells, and then back onto the streets. Not only is this cycle inhumane, it&#39;s expensive,
                   ineffective, and unsustainable.
                 </p>
                 <p>
@@ -366,7 +366,7 @@ export function PlatformContent() {
                     <strong>Collaborative Impact:</strong> I will use the Social Impact Collaborative model to align
                     efforts across nonprofits, Indigenous leaders, government, health care, and the business
                     community. This will ensure funding is streamlined, duplication is avoided, and results are
-                    measurable. We're not reinventing the wheel, we're getting it turning in the same direction.
+                    measurable. We&#39;re not reinventing the wheel, we&#39;re getting it turning in the same direction.
                   </li>
                   <li>
                     <strong>Homes that heal:</strong> I will partner with community-proven agencies to develop new
@@ -398,14 +398,14 @@ export function PlatformContent() {
               {/* Security On Public Transit */}
               <CollapsibleItem title='Security On Public Transit'>
                 <p className="font-medium italic">
-                  "Ridership is down from where it actually should be. Not because of numbers, but because of
-                  security issues"
+                  &quot;Ridership is down from where it actually should be. Not because of numbers, but because of
+                  security issues&quot;
                 </p>
                 <p>
                   In 2024, Edmontonians took over 6.1 million transit trips, about 15% more than the year before.
-                  But, despite claiming "record ridership", 75% of respondents feel fear of becoming a victim of
-                  violence on our city's transit system. Why? Because safety isn't just about ridership statistics,
-                  it's about what people actually see. Broken windows, overflowing garbage bins, drug use and
+                  But, despite claiming &quot;record ridership&quot;, 75% of respondents feel fear of becoming a victim of
+                  violence on our city&#39;s transit system. Why? Because safety isn&#39;t just about ridership statistics,
+                  it&#39;s about what people actually see. Broken windows, overflowing garbage bins, drug use and
                   disorder on platforms fuel fear, especially among women, youth, and seniors. Riders feel unsafe
                   not only due to violence, but due to visible signs of abandonment.
                 </p>
@@ -414,7 +414,7 @@ export function PlatformContent() {
                   <li>
                     Implementing turnstile systems at LRT stations will ensure only fare-paying riders enter
                     platforms, reducing security breaches. These smart gates can deter fare evasion, monitor crowd
-                    flow, reduce overcrowding, and improve emergency response. They're also ADA-compliant and unlock
+                    flow, reduce overcrowding, and improve emergency response. They&#39;re also ADA-compliant and unlock
                     automatically in emergencies.
                   </li>
                   <li>
@@ -424,13 +424,13 @@ export function PlatformContent() {
                   <li>
                     Creating a real-time Transit Safety Dashboard will track safety metrics such as incidents,
                     response times, and rider feedback, giving Edmontonians the power to hold the system
-                    accountable. We'll explore expanding the Transit app to let riders rate their sense of safety
+                    accountable. We&#39;ll explore expanding the Transit app to let riders rate their sense of safety
                     and satisfaction after every trip.
                   </li>
                   <li>
                     Having AI-assisted surveillance can help identify disturbances as they happen, directing the
-                    right response team, whether that's security or crisis outreach. But technology must never come
-                    at the expense of equity, and this is why we'll implement strong privacy protocols and evaluate
+                    right response team, whether that&#39;s security or crisis outreach. But technology must never come
+                    at the expense of equity, and this is why we&#39;ll implement strong privacy protocols and evaluate
                     any risks of bias or discrimination.
                   </li>
                 </ul>
@@ -445,24 +445,24 @@ export function PlatformContent() {
               {/* City-Run Grocery Stores */}
               <CollapsibleItem title='City-Run Grocery Stores'>
                 <p className="font-medium italic">
-                  "People shouldn't have to choose between groceries and a bus pass."
+                  &quot;People shouldn&#39;t have to choose between groceries and a bus pass.&quot;
                 </p>
                 <p>
-                  In 2019, Edmonton's Food Bank served an average of 21,385 people per month. By 2024, that number
+                  In 2019, Edmonton&#39;s Food Bank served an average of 21,385 people per month. By 2024, that number
                   nearly doubled to over 41,607. This is just in the last five years. The cost of a healthy diet has
                   risen sharply and what once cost $10,920 annually for a family of four in 2013 now costs more than
                   $15,000. For low-income households, food takes up 41% of the monthly budget, while rent eats up
-                  another 54%. This math doesn't leave much room for survival.
+                  another 54%. This math doesn&#39;t leave much room for survival.
                 </p>
                 <p>
                   Too many Edmontonians, especially students, newcomers, and working-class families, are forced to
                   make impossible choices between rent, groceries, utilities, and transit. For university students,
                   food banks are being used at record levels as tuition and housing costs soar. And for newcomers,
-                  food insecurity goes beyond access; it's about a lack of access to maintaining cultural identity,
+                  food insecurity goes beyond access; it&#39;s about a lack of access to maintaining cultural identity,
                   for while many food banks offer food, it may be culturally unfamiliar.
                 </p>
                 <p>
-                  We believe that people shouldn't just have access to food they need, but also, food they want, for
+                  We believe that people shouldn&#39;t just have access to food they need, but also, food they want, for
                   the inability to afford meaningful food not only takes a toll on physical health, but also
                   dignity, happiness, and self.
                 </p>
@@ -480,7 +480,7 @@ export function PlatformContent() {
                   rooted in community need.
                 </p>
                 <p>
-                  Food is not a privilege, it's a right. Let's build a city where no one has to pick between eating
+                  Food is not a privilege, it&#39;s a right. Let&#39;s build a city where no one has to pick between eating
                   and existing.
                 </p>
               </CollapsibleItem>
