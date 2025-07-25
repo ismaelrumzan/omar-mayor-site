@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import client from "@/tina/__generated__/client"
 
 import { jsonLd } from "@/lib/constants"
+import { getRobotsValue } from "@/lib/seo-config"
 import { PageComponent } from "@/components/app/page"
 
 export default async function Page({
@@ -26,7 +27,15 @@ export default async function Page({
   )
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+interface PageProps {
+  params: Promise<{ filename: string }>
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { filename } = await params
+  const pathname = `/${filename}`
   const headerQuery = await client.queries.headerConnection()
   const headerData = headerQuery.data.headerConnection.edges
     ? headerQuery.data.headerConnection.edges[0]?.node
@@ -36,6 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: title,
     description: description,
+    robots: getRobotsValue(pathname),
     openGraph: {
       title: title,
       description: headerData?.siteDescription || "",
