@@ -10,6 +10,64 @@ import {
 
 import { VideoPlayer } from "../ui/iframe-video"
 
+function CollapsibleHeader({
+  title,
+  subtitle,
+  children,
+}: {
+  title: string
+  subtitle: string
+  children: React.ReactNode
+}) {
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({})
+
+  const toggleSection = (sectionId: string) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [sectionId]: !prev[sectionId],
+    }))
+  }
+
+  return (
+    <Collapsible
+      open={openSections["section"]}
+      onOpenChange={() => toggleSection("section")}
+    >
+      <CollapsibleTrigger
+        className={`transition-colors rounded-none w-full border-t-2 border-theme-purple ${
+          openSections["section"]
+            ? "bg-theme-purple text-white"
+            : "hover:bg-theme-purple hover:text-white"
+        }`}
+      >
+        <div className="flex items-center justify-between text-left">
+          <div className="flex-1 min-w-0 pr-4">
+            <CardTitle className="text-2xl">{title}</CardTitle>
+            <p className="text-purple-100">{subtitle}</p>
+          </div>
+          <div
+            className={`rounded-full w-10 h-10 flex-shrink-0 flex items-center justify-center transition-colors duration-300 ${
+              openSections["section"]
+                ? "bg-primary"
+                : "bg-white border-2 border-theme-purple"
+            }`}
+          >
+            <Plus
+              className={`h-6 w-6 transform transition-transform duration-300 ease-in-out ${
+                openSections["section"]
+                  ? "rotate-45 text-theme-purple"
+                  : "text-theme-purple"
+              }`}
+              strokeWidth={2.5}
+            />
+          </div>
+        </div>
+      </CollapsibleTrigger>
+      <CollapsibleContent className="px-8 py-10">{children}</CollapsibleContent>
+    </Collapsible>
+  )
+}
+
 function CollapsibleItem({
   title,
   children,
@@ -93,14 +151,42 @@ export function PlatformContent() {
 
         <div className="space-y-8">
           <Card className="border-2 border-theme-purple rounded-none">
-            <CardHeader className="bg-theme-purple text-white rounded-none">
-              <CardTitle className="text-2xl">
-                AFFORDABILITY AND FISCAL RESPONSIBILITY
-              </CardTitle>
-              <p className="text-purple-100">
-                It’s about respecting tax dollars, and spending what we have. No
-                more than that.
-              </p>
+            <CardHeader className="bg-theme-purple text-white rounded-none p-4">
+              <CollapsibleHeader
+                title="AFFORDABILITY AND FISCAL RESPONSIBILITY"
+                subtitle="It’s about respecting tax dollars, and spending what we have. No more than that."
+              >
+                <div>
+                  <p>
+                    City Hall is supposed to spend your tax dollars wisely on
+                    what will benefit the majority of Edmontonians. Instead,
+                    they’ve saddled Edmontonians with billions in debt. Over the
+                    years, city politicians have poured hundreds of millions
+                    into projects that drive us further into debt, such as $80
+                    million on electric buses that are destined for the scrap
+                    yard, over $480 million on excessive mega rec centers in
+                    Lewis Farms and Coronation, $170 million on bike lanes, $632
+                    million on the deteriorating Blatchford redevelopment, and a
+                    proposed $250 million on the Ice District ‘Fan Park,’ and
+                    more. It’s no wonder the city’s total debt climbed to $4.6
+                    billion, and is projected to exceed $5 billion by 2026.
+                    Servicing this massive debt costs us $381 million a year.
+                    This is the City’s third highest annual expense, just behind
+                    the EPS and ETS. On top of all this, the City dug us into an
+                    additional $3.3 billion dollar capital shortfall. To pay for
+                    all of this, property taxes have skyrocketed over 22% in the
+                    last four years (40% when increased property assessments are
+                    factored in). Meanwhile, families are squeezed by inflation,
+                    homelessness has doubled, and over 42,000 Edmontonians rely
+                    monthly on the Food Bank. As Mayor, I will make sure our tax
+                    dollars are spent wisely, prioritize people over projects,
+                    and bring true Fiscal Responsibility to City Hall.
+                  </p>
+                  <VideoPlayer
+                    url={`https://www.youtube.com/embed/rtqJorzkHB0`}
+                  />
+                </div>
+              </CollapsibleHeader>
             </CardHeader>
             <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
               <CollapsibleItem title="Freezing Property Taxes, Balance the Budgets, and Stop Borrowing">
@@ -226,12 +312,34 @@ export function PlatformContent() {
           </Card>
 
           <Card className="border-2 border-theme-purple rounded-none">
-            <CardHeader className="bg-theme-purple text-white rounded-none">
-              <CardTitle className="text-2xl">ACCOUNTABILITY</CardTitle>
-              <p className="text-purple-100">
-                Edmontonians work hard for their money. Politicians should as
-                well.
-              </p>
+            <CardHeader className="bg-theme-purple text-white rounded-none p-4">
+              <CollapsibleHeader
+                title="ACCOUNTABILITY"
+                subtitle="Edmontonians work hard for their money. Politicians should as
+                well."
+              >
+                <div>
+                  <p>
+                    Edmontonians deserve a City Government that spends within
+                    its means and puts people before pet projects. Instead,
+                    we’ve seen over a decade of reckless spending, tax hikes,
+                    and failed vanity builds that benefit the few while the many
+                    struggle. City Hall awards itself with raises while families
+                    feel financial pressure, and now we’re $3.3 billion short on
+                    capital funding. While the mayor received a $16,723 raise on
+                    top of his over $200,000 salary, and the councilors received
+                    a $10,108 raise on top of their $120,000 salary, Edmonton
+                    families are struggling. That’s unacceptable. Elected
+                    officials shouldn’t be receiving raises while they are not
+                    helping the people they are meant to serve. In the real
+                    world, failure has consequences, and politics shouldn’t be
+                    any different.
+                  </p>
+                  <VideoPlayer
+                    url={`https://www.youtube.com/embed/ry6CME32zB8`}
+                  />
+                </div>
+              </CollapsibleHeader>
             </CardHeader>
             <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
               <CollapsibleItem title="Salary Freeze For Politicians">
@@ -314,10 +422,36 @@ export function PlatformContent() {
           </Card>
 
           <Card className="border-2 border-theme-purple rounded-none">
-            <CardHeader className="bg-theme-purple text-white rounded-none">
-              <CardTitle className="text-2xl">
-                AFFORDABLE HOUSING CRISIS
-              </CardTitle>
+            <CardHeader className="bg-theme-purple text-white rounded-none p-4">
+              <CollapsibleHeader title="AFFORDABLE HOUSING CRISIS" subtitle="">
+                <div>
+                  <p>
+                    Housing in Edmonton is becoming increasingly out of reach.
+                    Affordable housing is defined as a “shelter that costs less
+                    than 30% of a household’s gross income.” For a household
+                    earning under $63,000 a year, that kind of housing is almost
+                    impossible to find. Today, the median home price in Edmonton
+                    reached a record high of $465,000 in 2025. By 2026, nearly
+                    60,000 households will have their core housing needs unmet,
+                    meaning they will be living in a home that they cannot
+                    afford, is overcrowded, in disrepair or otherwise unsafe.
+                    Meanwhile, the City has fewer than 17,000 units affordable
+                    to its poorest residents.
+                  </p>
+                  <p>
+                    Families shouldn’t have to choose between rent and
+                    groceries. We need to take real, long-term action to address
+                    Edmonton’s housing shortage. That means building more total
+                    homes, including affordable ones, more efficiently. This can
+                    include converting empty office towers into housing units,
+                    fast tracking permits, and taking a sensible approach for
+                    infill development.
+                  </p>
+                  <VideoPlayer
+                    url={`https://www.youtube.com/embed/icRA9rMnyjs`}
+                  />
+                </div>
+              </CollapsibleHeader>
             </CardHeader>
             <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
               <CollapsibleItem title="Fast Track Permits">
@@ -410,15 +544,31 @@ export function PlatformContent() {
           </Card>
 
           <Card className="border-2 border-theme-purple rounded-none">
-            <CardHeader className="bg-theme-purple text-white rounded-none">
-              <CardTitle className="text-2xl">
-                HOMELESSNESS AND FOOD INSECURITY
-              </CardTitle>
-              <p className="text-purple-100 italic">
-                If someone is cold, give them a blanket. But the goal is to
+            <CardHeader className="bg-theme-purple text-white rounded-none p-4">
+              <CollapsibleHeader
+                title="HOMELESSNESS AND FOOD INSECURITY"
+                subtitle="If someone is cold, give them a blanket. But the goal is to
                 change the temperature so that no one needs a blanket to begin
-                with. – Omar Mohammad
-              </p>
+                with. – Omar Mohammad"
+              >
+                <div>
+                  <p>
+                    Too often, bandaid solutions are used for long-term
+                    problems. Homelessness, substance abuse, and security in the
+                    city cannot be fixed by simply masking deeper systemic
+                    problems with short-term solutions. We need to focus on
+                    long-term, sustainable changes that address the underlying
+                    causes and focus on offering real hope and dignity to
+                    Edmontonians that need help. Helping people with their most
+                    basic needs will not only benefit tens of thousands of
+                    people in this city, it will help us all by reducing the
+                    burden and cost to our Emergency and Police Services, and
+                    dramatically reduce crime on our streets. The value of the
+                    downstream benefits of solving homelessness and food
+                    insecurity to our communities and downtown is immense.
+                  </p>
+                </div>
+              </CollapsibleHeader>
             </CardHeader>
             <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
               <CollapsibleItem title="Housing First Initiative">
@@ -527,12 +677,32 @@ export function PlatformContent() {
           </Card>
 
           <Card className="border-2 border-theme-purple rounded-none">
-            <CardHeader className="bg-theme-purple text-white rounded-none">
-              <CardTitle className="text-2xl">SAFETY AND SECURITY</CardTitle>
-              <p className="text-purple-100">
-                Security isn’t just a statistic. It’s a perception that
-                significantly impacts behavior and quality of life.
-              </p>
+            <CardHeader className="bg-theme-purple text-white rounded-none p-4">
+              <CollapsibleHeader
+                title="SAFETY AND SECURITY"
+                subtitle="Security isn’t just a statistic. It’s a perception that
+                significantly impacts behavior and quality of life."
+              >
+                <div>
+                  <p>
+                    In 2024, Edmonton recorded its lowest overall crime rate in
+                    over a decade, with a ~2.5–6% drop in total criminal
+                    incidents and a 3–5% decrease in the Crime Severity Index
+                    compared to 2023. However, Property crime, visible disorder,
+                    and rising drug offenses are taking a toll on Edmonton’s
+                    neighborhoods and small businesses. Frequent thefts,
+                    break-ins, and vandalism drain resources and deter
+                    customers, while open drug use, encampments, and public
+                    intoxication foster a sense of neglect and lawlessness.
+                    These daily disruptions create a persistent feeling of
+                    insecurity that keeps residents off streets, transit, and
+                    local shops, undermining community safety and economic
+                    vitality. As Mayor, I will work tirelessly to address and
+                    solve these issues so that Edmontonians feel safe in their
+                    own communities.
+                  </p>
+                </div>
+              </CollapsibleHeader>
             </CardHeader>
             <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
               <CollapsibleItem title="Security on Public Transit">
