@@ -138,10 +138,10 @@ export function PlatformContent() {
                   <li>
                     <p>
                       Balancing both the Operational AND Capital Budgets. The
-                      Operational Budget must be balanced by law, but there's a
-                      massive Capital Budget shortfall of $1.5 billion in this
-                      cycle, and $1.8 billion in the next cycle. This isn't
-                      acceptable, nor is it sustainable.
+                      Operational Budget must be balanced by law, but
+                      there&apos;s a massive Capital Budget shortfall of $1.5
+                      billion in this cycle, and $1.8 billion in the next cycle.
+                      This isn&apos;t acceptable, nor is it sustainable.
                     </p>
                   </li>
                   <li>
