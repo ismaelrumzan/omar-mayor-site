@@ -34,6 +34,29 @@ export const PageCollection: Collection = {
       type: "string",
     },
     {
+      name: "published",
+      label: "Show in sitemap",
+      type: "boolean",
+    },
+    {
+      name: "description",
+      label: "Page description",
+      description: "For SEO purposes",
+      type: "string",
+    },
+    {
+      name: "llmsContent",
+      label: "Page LLMS Content",
+      description: "For LLMS purposes",
+      type: "string",
+    },
+    {
+      name: "pageImage",
+      label: "Page Image",
+      description: "For SEO purposes",
+      type: "image",
+    },
+    {
       name: "blocks",
       label: "Content Blocks",
       description:

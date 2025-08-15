@@ -10,14 +10,9 @@ import { PageComponent } from "@/components/app/page"
 export default async function Page({
   params,
 }: {
-  params: Promise<{ filename: string[] }>
+  params: Promise<{ filename: string }>
 }) {
   const { filename } = await params
-
-  // Check if the path ends with .md and redirect to API route
-  if (filename.length > 0 && filename[filename.length - 1].endsWith(".md")) {
-    notFound()
-  }
 
   const result = await client.queries.pageAndNav({
     relativePath: `${filename}.mdx`,
@@ -36,7 +31,7 @@ export default async function Page({
 }
 
 interface PageProps {
-  params: Promise<{ filename: string[] }>
+  params: Promise<{ filename: string }>
 }
 
 export async function generateMetadata({
@@ -44,15 +39,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { filename } = await params
 
-  // Check if the path ends with .md and return empty metadata to avoid conflicts
-  if (filename.length > 0 && filename[filename.length - 1].endsWith(".md")) {
-    return {
-      title: "Not Found",
-      description: "Page not found",
-    }
-  }
-
-  const pathname = `/${filename.join("/")}`
+  const pathname = `/${filename}`
   const headerQuery = await client.queries.headerConnection()
   const headerData = headerQuery.data.headerConnection.edges
     ? headerQuery.data.headerConnection.edges[0]?.node
@@ -89,14 +76,8 @@ export async function generateStaticParams() {
   const pages = await client.queries.pageConnection()
   const paths = pages.data?.pageConnection.edges
     ?.map((edge) => ({
-      filename: edge?.node?._sys.breadcrumbs,
+      filename: edge?.node?._sys.filename,
     }))
-    .filter((path) => {
-      // Filter out paths that end with .md to avoid conflicts with [filename].md route
-      return (
-        !path.filename ||
-        !path.filename.some((segment: string) => segment.endsWith(".md"))
-      )
-    })
+    .filter((path) => path.filename) // Only include valid filenames
   return paths || []
 }
