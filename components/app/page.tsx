@@ -15,8 +15,8 @@ import { DonationBlock } from "../page/donation-block"
 import { EmbedForm } from "../page/embed-form"
 import { HomeCTA } from "../page/home-cta"
 import { Letter } from "../page/letter"
-import { SupportOmar } from "../page/support-omar"
 import { PlatformContent } from "../page/platform"
+import { SupportOmar } from "../page/support-omar"
 import { VideoBlock } from "../page/video-block"
 
 export function PageComponent(props: {
@@ -35,7 +35,7 @@ export function PageComponent(props: {
         <div className="grow">
           {pathname === "/" && <HomeCTA />}
           {pathname === "/support-omar" && <SupportOmar />}
-          {pathname === "/_platform" && <PlatformContent />}
+          {pathname === "/platform" && <PlatformContent />}
           {data.page.blocks?.map((block, i) => {
             switch (block?.__typename) {
               case "PageBlocksWelcomeHero": {

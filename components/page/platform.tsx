@@ -157,6 +157,9 @@ export function PlatformContent() {
                 subtitle="It’s about respecting tax dollars, and spending what we have. No more than that."
               >
                 <div>
+                  <VideoPlayer
+                    url={`https://www.youtube.com/embed/rtqJorzkHB0`}
+                  />
                   <p>
                     City Hall is supposed to spend your tax dollars wisely on
                     what will benefit the majority of Edmontonians. Instead,
@@ -182,14 +185,14 @@ export function PlatformContent() {
                     dollars are spent wisely, prioritize people over projects,
                     and bring true Fiscal Responsibility to City Hall.
                   </p>
-                  <VideoPlayer
-                    url={`https://www.youtube.com/embed/rtqJorzkHB0`}
-                  />
                 </div>
               </CollapsibleHeader>
             </CardHeader>
             <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
               <CollapsibleItem title="Freezing Property Taxes, Balance the Budgets, and Stop Borrowing">
+                <VideoPlayer
+                  url={`https://www.youtube.com/embed/65LHrELbt2Q`}
+                />
                 <p className="font-medium text-lg text-muted-foreground">
                   Edmontonians aren’t the City’s ATM
                 </p>
@@ -244,9 +247,6 @@ export function PlatformContent() {
                   Edmonton families live within their means – it’s time for our
                   politicians to do the same!
                 </p>
-                <VideoPlayer
-                  url={`https://www.youtube.com/embed/65LHrELbt2Q`}
-                />
               </CollapsibleItem>
 
               <CollapsibleItem title="My Fiscal Responsibility Plan">
@@ -319,6 +319,9 @@ export function PlatformContent() {
                 well."
               >
                 <div>
+                  <VideoPlayer
+                    url={`https://www.youtube.com/embed/ry6CME32zB8`}
+                  />
                   <p>
                     Edmontonians deserve a City Government that spends within
                     its means and puts people before pet projects. Instead,
@@ -335,9 +338,6 @@ export function PlatformContent() {
                     world, failure has consequences, and politics shouldn’t be
                     any different.
                   </p>
-                  <VideoPlayer
-                    url={`https://www.youtube.com/embed/ry6CME32zB8`}
-                  />
                 </div>
               </CollapsibleHeader>
             </CardHeader>
@@ -425,6 +425,9 @@ export function PlatformContent() {
             <CardHeader className="bg-theme-purple text-white rounded-none p-4">
               <CollapsibleHeader title="AFFORDABLE HOUSING CRISIS" subtitle="">
                 <div>
+                  <VideoPlayer
+                    url={`https://www.youtube.com/embed/icRA9rMnyjs`}
+                  />
                   <p>
                     Housing in Edmonton is becoming increasingly out of reach.
                     Affordable housing is defined as a “shelter that costs less
@@ -447,9 +450,6 @@ export function PlatformContent() {
                     fast tracking permits, and taking a sensible approach for
                     infill development.
                   </p>
-                  <VideoPlayer
-                    url={`https://www.youtube.com/embed/icRA9rMnyjs`}
-                  />
                 </div>
               </CollapsibleHeader>
             </CardHeader>
@@ -499,6 +499,9 @@ export function PlatformContent() {
               </CollapsibleItem>
 
               <CollapsibleItem title="Infills">
+                <VideoPlayer
+                  url={`https://www.youtube.com/embed/sHVS_5kvWkE`}
+                />
                 <p className="font-medium text-lg text-muted-foreground">
                   We need more housing, but we also need common sense.
                 </p>
@@ -536,9 +539,6 @@ export function PlatformContent() {
                     least 0.33 parking stalls per housing unit.
                   </li>
                 </ol>
-                <VideoPlayer
-                  url={`https://www.youtube.com/embed/sHVS_5kvWkE`}
-                />
               </CollapsibleItem>
             </CardContent>
           </Card>
@@ -621,6 +621,9 @@ export function PlatformContent() {
                 </ul>
               </CollapsibleItem>
               <CollapsibleItem title="City-Supported Grocery Stores">
+                <VideoPlayer
+                  url={`https://www.youtube.com/embed/0DwpE3I4soM`}
+                />
                 <p className="font-medium text-lg text-muted-foreground">
                   People shouldn’t have to choose between groceries and rent.
                 </p>
@@ -669,9 +672,6 @@ export function PlatformContent() {
                     eliminate food waste.
                   </li>
                 </ul>
-                <VideoPlayer
-                  url={`https://www.youtube.com/embed/0DwpE3I4soM`}
-                />
               </CollapsibleItem>
             </CardContent>
           </Card>
