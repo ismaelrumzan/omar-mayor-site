@@ -85,14 +85,13 @@ export function SupportOmar() {
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     Sign up to show your support, stay in the loop on
-                    Omar&apos;s campaign, and get updates on what he&apos;s
-                    doing to bring change to Edmonton.
+                    Omar&apos;s campaign, and/or request a LAWN SIGN!
                   </p>
                   <Button
                     className="w-full bg-primary hover:opacity-70 text-white font-semibold py-3"
                     onClick={() => setIsSignupModalOpen(true)}
                   >
-                    Get Updates
+                    Sign up and request a LAWN SIGN!
                   </Button>
                 </CardContent>
               </Card>
