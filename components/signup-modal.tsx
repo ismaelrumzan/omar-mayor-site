@@ -21,7 +21,7 @@ export function SignupModal({ isOpen, onClose }: SignupModalProps) {
       // Preload the iframe content when modal opens
       const link = document.createElement("link")
       link.rel = "prefetch"
-      link.href = "https://form.qomon.org/join-the-movement/"
+      link.href = "https://form.qomon.org/join-the-movement-v2/"
       document.head.appendChild(link)
 
       // Reset form loaded state when modal opens
@@ -84,7 +84,7 @@ export function SignupModal({ isOpen, onClose }: SignupModalProps) {
           )}
 
           <iframe
-            src="https://form.qomon.org/join-the-movement/"
+            src="https://form.qomon.org/join-the-movement-v2/"
             width="100%"
             height="600"
             frameBorder="0"
