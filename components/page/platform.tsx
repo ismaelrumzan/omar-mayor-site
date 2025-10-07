@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Link from "next/link"
 import { Plus } from "lucide-react"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -680,7 +681,7 @@ export function PlatformContent() {
             <CardHeader className="bg-theme-purple text-white rounded-none p-4">
               <CollapsibleHeader
                 title="SAFETY AND SECURITY"
-                subtitle="Security isn’t just a statistic. It’s a perception that
+                subtitle="Security isn't just a statistic. It's a perception that
                 significantly impacts behavior and quality of life."
               >
                 <div>
@@ -689,9 +690,9 @@ export function PlatformContent() {
                     over a decade, with a ~2.5–6% drop in total criminal
                     incidents and a 3–5% decrease in the Crime Severity Index
                     compared to 2023. However, Property crime, visible disorder,
-                    and rising drug offenses are taking a toll on Edmonton’s
-                    neighborhoods and small businesses. Frequent thefts,
-                    break-ins, and vandalism drain resources and deter
+                    and rising drug offenses are taking a toll on
+                    Edmonton&apos;s neighborhoods and small businesses. Frequent
+                    thefts, break-ins, and vandalism drain resources and deter
                     customers, while open drug use, encampments, and public
                     intoxication foster a sense of neglect and lawlessness.
                     These daily disruptions create a persistent feeling of
@@ -816,7 +817,7 @@ export function PlatformContent() {
                   <li>
                     Court Liaison Program: City-funded liaison to ensure
                     evidence and victim impact statements are ready so charges
-                    aren’t dropped for procedural reasons.
+                    aren&apos;t dropped for procedural reasons.
                   </li>
                   <li>
                     Neighbourhood Watch 2.0: City-supported community safety
@@ -856,8 +857,8 @@ export function PlatformContent() {
                   <li>
                     Lighting & CPTED (Crime Prevention Through Environmental
                     Design): Accelerate retrofits for brighter street lighting,
-                    remove visual obstructions, and redesign “problem corners”
-                    where disorder concentrates.
+                    remove visual obstructions, and redesign &quot;problem
+                    corners&quot; where disorder concentrates.
                   </li>
                 </ul>
               </CollapsibleItem>
@@ -883,6 +884,401 @@ export function PlatformContent() {
                     of safety improvements).
                   </li>
                 </ul>
+              </CollapsibleItem>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-theme-purple rounded-none">
+            <CardHeader className="bg-theme-purple text-white rounded-none p-4">
+              <CardTitle className="text-2xl">DOWNTOWN</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
+              <CollapsibleItem title="Revitalizing Downtown">
+                <p className="font-medium text-lg text-muted-foreground">
+                  Downtown Edmonton is struggling, and if our downtown falls
+                  behind, our city falls behind.{" "}
+                  <Link
+                    href="https://edmonton.citynews.ca/2025/07/28/edmonton-overall-crime-rate-2024"
+                    target="_blank"
+                    className="underline hover:no-underline text-blue-500"
+                  >
+                    Small businesses are hit with theft and vandalism. Streets
+                    feel unsafe.
+                  </Link>{" "}
+                  Major roads like Jasper and 104th are torn up at the same
+                  time, driving people away. And instead of fixing the
+                  fundamentals,{" "}
+                  <Link
+                    href="https://edmonton.citynews.ca/2025/06/26/edmontonians-sound-off-on-public-dollars-for-oilers-fan-park"
+                    className="underline hover:no-underline text-blue-500"
+                    target="_blank"
+                  >
+                    City Hall is putting $250 million into a theme park that
+                    families visit once and then leave
+                  </Link>
+                  . That&apos;s not real revitalization.
+                </p>
+                <p>
+                  The way to bring downtown back is to bring <em>people</em>{" "}
+                  back. My plan is to revitalize downtown by bringing
+                  Edmontonians there, and not just on game nights. This plan
+                  will focus primarily on <em>housing</em> because when people
+                  live there, they shop there, they eat there, they bring
+                  vibrancy there.
+                </p>
+                <p>As Mayor, I will:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    <p>
+                      Offer tax incentives and long-term leases to developers
+                      who build affordable housing.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Make it easier to convert underused buildings into homes.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Support small businesses with security grants, rapid
+                      graffiti removal, and more peace officer patrols.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Coordinate road construction so it brings people in
+                      instead of driving them away. Downtown should not be
+                      inaccessible.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  Real downtown revitalization means a permanent population
+                  downtown, thriving small businesses, and a safer, more vibrant
+                  city core. A strong city needs a strong downtown.
+                </p>
+              </CollapsibleItem>
+
+              <CollapsibleItem title="Small Business">
+                <p className="font-medium text-lg text-muted-foreground">
+                  Small businesses are the backbone of Edmonton&apos;s economy
+                  because they create jobs, build community, and keep our
+                  neighbourhoods vibrant. But right now, they&apos;re being
+                  crushed from every angle.
+                </p>
+                <p>
+                  Property taxes keep rising.{" "}
+                  <Link
+                    href="https://www.cfib-fcei.ca/en/media/more-than-half-of-alberta-small-businesses-have-had-direct-experience-with-crime-in-the-past-year"
+                    className="underline hover:no-underline text-blue-500"
+                    target="_blank"
+                  >
+                    Crime is up, with more theft, vandalism, and graffiti than
+                    ever. Construction projects drag on for months, blocking
+                    customers and putting livelihoods at risk
+                  </Link>
+                  . And City Hall piles on with slow permits and endless red
+                  tape. Instead of feeling supported, too many small business
+                  owners feel like they&apos;re fighting City Hall just to stay
+                  afloat.
+                </p>
+                <p>As mayor, I will:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    <p>
+                      Freeze property taxes to keep more money in small business
+                      owners&apos; pockets.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Provide security grants to tackle crime and vandalism.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Require faster, more efficient construction timelines
+                      where small businesses are impacted.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Cut red tape and speed up permits so entrepreneurs hear
+                      &quot;yes&quot; instead of waiting months.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Ensure that City Hall will be a partner, not a roadblock.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  Small businesses are the backbone of our community and they
+                  deserve a city that says yes, not a city that stands in their
+                  way.
+                </p>
+              </CollapsibleItem>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-theme-purple rounded-none">
+            <CardHeader className="bg-theme-purple text-white rounded-none p-4">
+              <CardTitle className="text-2xl">INFRASTRUCTURE</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
+              <CollapsibleItem title="Smarter Spending, Real Accountability">
+                <p className="font-medium text-lg text-muted-foreground">
+                  Edmontonians are frustrated with how infrastructure is
+                  handled: projects are delayed, over budget, and too often
+                  focus on flashy new builds instead of fixing what&apos;s
+                  broken. Roads and transit people rely on every day get
+                  neglected while billions are poured into megaprojects we
+                  can&apos;t afford.
+                </p>
+                <p>As Mayor, I will:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    <p>
+                      Adopt a &quot;fix before you build&quot; principle meaning
+                      that we will be renewing essential infrastructure before
+                      chasing new projects.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Implement an Essential Infrastructure Renewal Plan and a
+                      Smart Staging Plan so projects are sequenced intelligently
+                      and efficiently.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Launch a Construction Impact Support Plan so small
+                      businesses aren&apos;t left carrying the burden when their
+                      street is torn up.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Create a public dashboard so Edmontonians can track
+                      progress, costs, and overruns in real time.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Approve only projects that serve the majority of
+                      Edmontonians, improve safety and affordability, and can be
+                      paid for without unsustainable debt or tax hikes.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  Edmonton needs infrastructure that delivers value for people
+                  and businesses, not vanity projects that drain our budget.
+                </p>
+              </CollapsibleItem>
+
+              <CollapsibleItem title="Essential vs. New">
+                <p className="font-medium text-lg text-muted-foreground">
+                  Edmonton has a bad habit: chasing shiny new projects while the
+                  basics fall apart. Potholes, broken sidewalks, and aging pipes
+                  aren&apos;t glamorous, but they&apos;re what we all rely on
+                  every single day.
+                </p>
+                <p>
+                  City Hall needs to start thinking like a responsible
+                  household: fix what we already have before maxing out the
+                  credit card on big-ticket items.{" "}
+                  <Link
+                    href="https://www.edmonton.ca/sites/default/files/public-files/2024_Financial_Report_to_Residents.pdf?cb=1751361352&utm_"
+                    className="underline hover:no-underline text-blue-500"
+                    target="_blank"
+                  >
+                    With almost $5 billion in debt, we can&apos;t keep piling on
+                    commitments we can&apos;t afford.
+                  </Link>
+                </p>
+                <p>
+                  As mayor, I&apos;ll push for a{" "}
+                  <strong>&quot;fix before you build&quot; principle</strong>.
+                  That means core infrastructure renewal comes first — and when
+                  it comes to new projects, the bar will be way higher.
+                </p>
+                <p>
+                  Here&apos;s how I&apos;ll judge whether a new project moves
+                  forward:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    <p>
+                      Does it serve the majority of Edmontonians, not just a
+                      small minority?
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Does it actually improve safety, mobility, or
+                      affordability?
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Can we pay for it without raising taxes or drowning in
+                      more debt?
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  If the answer&apos;s no, then it&apos;s not the right time.
+                  Edmonton deserves a city government that puts people before
+                  prestige projects and a city that leaves the next generation
+                  with assets, not debt.
+                </p>
+              </CollapsibleItem>
+
+              <CollapsibleItem title="Value & Accountability">
+                <p className="font-medium text-lg text-muted-foreground">
+                  People in Edmonton are fed up with wasteful projects that run
+                  over budget and don&apos;t deliver what was promised. It feels
+                  like every year there&apos;s another big announcement, another
+                  delay, and another bill handed to taxpayers. That has to
+                  change.
+                </p>
+                <p>
+                  As mayor, I&apos;ll make sure infrastructure spending is
+                  accountable and transparent. That means:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    <p>
+                      Cost-benefit analyses before major projects even get
+                      approved.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Public reporting on progress, delays, and cost overruns so
+                      people can actually see where their money is going.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      A Construction Impact Support Plan so small businesses
+                      aren&apos;t left to sink when city projects block their
+                      doors.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  On top of that, I&apos;ll launch a public online dashboard
+                  where anyone can track city projects in real time. No more
+                  guessing, no more excuses.
+                </p>
+                <p>
+                  At the end of the day, infrastructure has to deliver something
+                  real, whether that&apos;s jobs, better mobility, efficiency,
+                  or competitiveness. If a project can&apos;t prove that, it
+                  won&apos;t get a green light from me.
+                </p>
+              </CollapsibleItem>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-theme-purple rounded-none">
+            <CardHeader className="bg-theme-purple text-white rounded-none p-4">
+              <CardTitle className="text-2xl">CORE SERVICES</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0 space-y-0 rounded-none [&_p]:pb-2">
+              <CollapsibleItem title="Get the Basics Right">
+                <p className="font-medium text-lg text-muted-foreground">
+                  Too many Edmontonians feel like City Hall has lost focus.
+                  Garbage pickup,{" "}
+                  <Link
+                    href="https://www.facebook.com/groups/millwoodscommunitygroup/posts/2563572843847896/"
+                    className="underline hover:no-underline text-blue-500"
+                    target="_blank"
+                  >
+                    snow clearing, road repairs, bylaw enforcement which are the
+                    services people rely on every single day aren&apos;t being
+                    delivered consistently or effectively
+                  </Link>
+                  . Instead, the City is distracted by side projects while
+                  basics fall behind.
+                </p>
+
+                <p>As Mayor, I will:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    <p>
+                      Put core services first in the budget, before new programs
+                      or pet projects.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Implement performance benchmarks so Edmontonians can see
+                      if services are actually being delivered on time and on
+                      budget.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Ensure snow clearing, pothole repair, and garbage
+                      collection are prioritized and properly funded.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Streamline bylaw enforcement so rules are enforced fairly
+                      and consistently across the city.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Expand digital tools so residents can report issues and
+                      track resolution in real time.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  A great city starts with the basics. When Edmonton gets the
+                  fundamentals right, everything else becomes possible.
+                </p>
+              </CollapsibleItem>
+
+              <CollapsibleItem title="Value & Accountability">
+                <p className="font-medium text-lg text-muted-foreground">
+                  Right now,{" "}
+                  <Link
+                    href="https://www.youtube.com/watch?v=muXud9fu9gg"
+                    className="underline hover:no-underline text-blue-500"
+                    target="_blank"
+                  >
+                    Edmonton&apos;s core services often don&apos;t live up to
+                    expectations
+                  </Link>
+                  . Snow gets left uncleared, transit breaks down, and projects
+                  go way over budget while taxpayers are stuck footing the bill.
+                </p>
+                <p>
+                  As mayor, I&apos;ll make City Hall transparent and
+                  accountable.
+                </p>
+                <p>
+                  That means a user-friendly online dashboard where anyone can
+                  see, in real time, how core services are performing. If
+                  something is falling short, the public will know, Council will
+                  know, and I&apos;ll make sure answers are demanded.
+                </p>
+                <p>
+                  The dashboard will also track how your tax dollars are spent,
+                  so it&apos;s clear whether money is being used efficiently or
+                  wasted. Edmonton deserves a city run with the same discipline
+                  and accountability that people expect in their own lives and
+                  businesses.
+                </p>
               </CollapsibleItem>
             </CardContent>
           </Card>
