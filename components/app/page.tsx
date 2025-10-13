@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/site-header"
 
 import { DonationBlock } from "../page/donation-block"
 import { EmbedForm } from "../page/embed-form"
+import { FullDisclosureContent } from "../page/full-disclosure"
 import { HomeCTA } from "../page/home-cta"
 import { Letter } from "../page/letter"
 import { PlatformContent } from "../page/platform"
@@ -36,6 +37,7 @@ export function PageComponent(props: {
           {pathname === "/" && <HomeCTA />}
           {pathname === "/support-omar" && <SupportOmar />}
           {pathname === "/platform" && <PlatformContent />}
+          {pathname === "/full-disclosure" && <FullDisclosureContent />}
           {data.page.blocks?.map((block, i) => {
             switch (block?.__typename) {
               case "PageBlocksWelcomeHero": {
