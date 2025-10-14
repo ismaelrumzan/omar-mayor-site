@@ -7,7 +7,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-// Combined donor data from all CSV files (duplicates removed)
+// Combined donor data from all CSV files (complete list)
 const donorData = [
   { name: "Abdul Assamad Farhat", amount: 250 },
   { name: "Abdul Farhat", amount: 250 },
@@ -32,6 +32,7 @@ const donorData = [
   { name: "Beg Aliya", amount: 25 },
   { name: "Bhupinder Minhas", amount: 500 },
   { name: "Brayden Yundt", amount: 50 },
+  { name: "Celia Paz", amount: 50 },
   { name: "Chaddy Moustarah", amount: 1500 },
   { name: "Clayton Davis", amount: 500 },
   { name: "Crowfoot Deb", amount: 5000 },
@@ -43,6 +44,7 @@ const donorData = [
   { name: "Dr. Linda Uniat", amount: 500 },
   { name: "Edmonotn Islamic Centre", amount: 500 },
   { name: "Elizabeth Cruickshank", amount: 25 },
+  { name: "Ehab Shawar", amount: 2500 },
   { name: "Ehab Shawar", amount: 2500 },
   { name: "Erman Chak", amount: 1500.01 },
   { name: "Fardad Vaziri", amount: 1000 },
@@ -58,6 +60,8 @@ const donorData = [
   { name: "hamza mitha", amount: 1000 },
   { name: "Hasan Razak", amount: 25 },
   { name: "Ian Thomson", amount: 50 },
+  { name: "Ian Thomson", amount: 50 },
+  { name: "Issam Saleh", amount: 1000 },
   { name: "Issam Saleh", amount: 1000 },
   { name: "Issan Samah", amount: 75 },
   { name: "James Crowe", amount: 50 },
@@ -73,6 +77,7 @@ const donorData = [
   { name: "Marisa Haraphongse", amount: 150 },
   { name: "Marie-Josee Langlois", amount: 25 },
   { name: "Marnie Watts", amount: 25 },
+  { name: "Maryam Javed", amount: 2500 },
   { name: "Matthew Arun", amount: 25 },
   { name: "Mike Ettinger", amount: 100 },
   { name: "Mohamed Ahmad", amount: 250 },
@@ -80,6 +85,7 @@ const donorData = [
   { name: "Mohammed Damra", amount: 1000 },
   { name: "Mousa Qasqas", amount: 75 },
   { name: "Mousa Qasqas", amount: 500 },
+  { name: "Muba Taher", amount: 1000 },
   { name: "Muba Taher", amount: 1000 },
   { name: "Mustafa Super", amount: 100 },
   { name: "Nabeil Moussa", amount: 1000 },
@@ -106,6 +112,7 @@ const donorData = [
   { name: "Reza Notiar PC", amount: 1000 },
   { name: "Richard Graham", amount: 1000 },
   { name: "Riad Assaf", amount: 2500 },
+  { name: "Riad Assaf", amount: 2600 },
   { name: "Riad Tarrabain", amount: 500 },
   { name: "Robby Halabi", amount: 1000 },
   { name: "Ryan Button", amount: 100 },
